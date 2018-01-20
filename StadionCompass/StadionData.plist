@@ -349,9 +349,9 @@
 			<key>backgroundColor</key>
 			<string>#009822</string>
 			<key>textColor</key>
-			<string>#000000 </string>
+			<string>#000000</string>
 			<key>arrowColor</key>
-			<string>#000000 </string>
+			<string>#000000</string>
 			<key>name</key>
 			<string>HDI-Arena</string>
 			<key>city</key>
@@ -558,7 +558,7 @@
 			<key>name</key>
 			<string>SchücoArena</string>
 			<key>city</key>
-			<string>Bielefeld </string>
+			<string>Bielefeld</string>
 			<key>location</key>
 			<dict>
 				<key>lat</key>
@@ -578,7 +578,7 @@
 			<key>name</key>
 			<string>DDV-Stadion</string>
 			<key>city</key>
-			<string>Dresden </string>
+			<string>Dresden</string>
 			<key>location</key>
 			<dict>
 				<key>lat</key>
@@ -718,7 +718,7 @@
 			<key>name</key>
 			<string>Fritz-Walter-Stadion</string>
 			<key>city</key>
-			<string>Kaiserslautern </string>
+			<string>Kaiserslautern</string>
 			<key>location</key>
 			<dict>
 				<key>lat</key>

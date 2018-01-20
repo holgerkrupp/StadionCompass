@@ -41,7 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.isNavigationBarHidden = true
         allowLocation.isHidden = true
         if let stadionID = getObjectForKeyFromPersistentStorrage("homestadium") as? String
         {
@@ -64,6 +64,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         updateLocation()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: animated);
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.navigationBar.isHidden = true
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,8 +113,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         arrowImage.isHidden = true
         cityLabel.isHidden = true
         CounterLabel.isHidden = true
-        degreesLabel.text = String.localizedStringWithFormat(NSLocalizedString("locatoin.denied", value:"Please open Settings to allow location access",comment: "shown when location data is not shared"))
-        allowLocation.setTitle(String.localizedStringWithFormat(NSLocalizedString("locatoin.denied", value:"Please open allow location access",comment: "title when location data is not requested")), for: .normal)
+        degreesLabel.text = String.localizedStringWithFormat(NSLocalizedString("location.denied", value:"Please open Settings to allow location access",comment: "shown when location data is not shared"))
+        allowLocation.setTitle(String.localizedStringWithFormat(NSLocalizedString("location.denied", value:"Please open allow location access",comment: "title when location data is not requested")), for: .normal)
         // allowLocation.isHidden = false
         NSLog("User denied location")
     }
@@ -111,12 +123,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func locationManagerShouldDisplayHeadingCalibration(_ manager: CLLocationManager) -> Bool {
+        return true
+    }
+    
     func updateUI(){
         locationManager.requestLocation()
         
         //    locationManager.startUpdatingHeading()
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
+        
         
         
         let userlocation  = locationManager.location?.coordinate

@@ -68,10 +68,10 @@
 			children = (
 				489B74591FE99BBE0020B4CB /* AppDelegate.swift */,
 				489B746F1FE99FF70020B4CB /* supportfunctions.swift */,
+				481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */,
 				489B745B1FE99BBE0020B4CB /* ViewController.swift */,
 				481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */,
 				489B745D1FE99BBE0020B4CB /* Main.storyboard */,
-				481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */,
 				489B74601FE99BBE0020B4CB /* Assets.xcassets */,
 				489B74621FE99BBE0020B4CB /* LaunchScreen.storyboard */,
 				48FAAB5C20113649006C8D61 /* Info.plist */,
@@ -337,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				INFOPLIST_FILE = StadionCompass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				INFOPLIST_FILE = StadionCompass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";

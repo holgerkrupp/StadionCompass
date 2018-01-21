@@ -10,6 +10,8 @@
 		481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */; };
 		481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */; };
 		484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */; };
+		484B0C93201530D500D9BADE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484B0C92201530D400D9BADE /* Info.plist */; };
+		484B0C96201531B700D9BADE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 484B0C98201531B700D9BADE /* InfoPlist.strings */; };
 		489B745A1FE99BBE0020B4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B74591FE99BBE0020B4CB /* AppDelegate.swift */; };
 		489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B745B1FE99BBE0020B4CB /* ViewController.swift */; };
 		489B745F1FE99BBE0020B4CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489B745D1FE99BBE0020B4CB /* Main.storyboard */; };
@@ -25,6 +27,9 @@
 		481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmykUIColor.swift; sourceTree = "<group>"; };
 		481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorViewController.swift; sourceTree = "<group>"; };
 		484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorCell.swift; sourceTree = "<group>"; };
+		484B0C92201530D400D9BADE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484B0C97201531B700D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		484B0C992015327B00D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/distanceTexts.plist; sourceTree = "<group>"; };
 		489B74561FE99BBE0020B4CB /* StadionCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StadionCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489B74591FE99BBE0020B4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489B745B1FE99BBE0020B4CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,8 +39,6 @@
 		489B746D1FE99E510020B4CB /* StadionData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StadionData.plist; sourceTree = "<group>"; };
 		489B746F1FE99FF70020B4CB /* supportfunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supportfunctions.swift; sourceTree = "<group>"; };
 		489B74711FE9A7650020B4CB /* Stadion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stadion.swift; sourceTree = "<group>"; };
-		48FAAB5B20113649006C8D61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
-		48FAAB5F2011365F006C8D61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/distanceTexts.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +80,10 @@
 				489B745D1FE99BBE0020B4CB /* Main.storyboard */,
 				489B74601FE99BBE0020B4CB /* Assets.xcassets */,
 				489B74621FE99BBE0020B4CB /* LaunchScreen.storyboard */,
-				48FAAB5C20113649006C8D61 /* Info.plist */,
 				489B746D1FE99E510020B4CB /* StadionData.plist */,
+				484B0C92201530D400D9BADE /* Info.plist */,
 				48FAAB602011365F006C8D61 /* distanceTexts.plist */,
+				484B0C98201531B700D9BADE /* InfoPlist.strings */,
 				489B74711FE9A7650020B4CB /* Stadion.swift */,
 			);
 			path = StadionCompass;
@@ -146,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				489B74641FE99BBE0020B4CB /* LaunchScreen.storyboard in Resources */,
+				484B0C96201531B700D9BADE /* InfoPlist.strings in Resources */,
 				489B74611FE99BBE0020B4CB /* Assets.xcassets in Resources */,
+				484B0C93201530D500D9BADE /* Info.plist in Resources */,
 				48FAAB5E2011365F006C8D61 /* distanceTexts.plist in Resources */,
 				489B745F1FE99BBE0020B4CB /* Main.storyboard in Resources */,
 				489B746E1FE99E510020B4CB /* StadionData.plist in Resources */,
@@ -190,6 +196,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		484B0C98201531B700D9BADE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				484B0C97201531B700D9BADE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		489B745D1FE99BBE0020B4CB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -206,18 +220,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		48FAAB5C20113649006C8D61 /* Info.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48FAAB5B20113649006C8D61 /* Base */,
-			);
-			name = Info.plist;
-			sourceTree = "<group>";
-		};
 		48FAAB602011365F006C8D61 /* distanceTexts.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
-				48FAAB5F2011365F006C8D61 /* Base */,
+				484B0C992015327B00D9BADE /* en */,
 			);
 			name = distanceTexts.plist;
 			sourceTree = "<group>";

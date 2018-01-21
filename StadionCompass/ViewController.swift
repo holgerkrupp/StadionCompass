@@ -28,7 +28,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var infoButton: UIButton!
     
     @IBAction func allowLocation(_ sender: Any) {
-        askforLocation()
+        goToSettings()
     }
     
     
@@ -114,9 +114,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         cityLabel.isHidden = true
         CounterLabel.isHidden = true
         degreesLabel.text = String.localizedStringWithFormat(NSLocalizedString("location.denied", value:"Please open Settings to allow location access",comment: "shown when location data is not shared"))
-        allowLocation.setTitle(String.localizedStringWithFormat(NSLocalizedString("location.denied", value:"Please open allow location access",comment: "title when location data is not requested")), for: .normal)
-        // allowLocation.isHidden = false
+        allowLocation.setTitle(String.localizedStringWithFormat(NSLocalizedString("location.deniedbutton", value:"Please open allow location access",comment: "title when location data is not requested")), for: .normal)
+         allowLocation.isHidden = false
         NSLog("User denied location")
+    }
+    
+    func goToSettings(){
+        guard let SettingsURL = URL(string:
+            UIApplicationOpenSettingsURLString) else {
+                return
+        }
+        
+        if UIApplication.shared.canOpenURL(SettingsURL) {
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(SettingsURL, completionHandler: { (success) in
+                    
+                    print(" Settings opened: \(success)")
+                    
+                })
+            } else {
+                // Fallback on earlier versions
+            }
+        }
     }
     
     func changeStadium(){

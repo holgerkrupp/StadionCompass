@@ -32,6 +32,11 @@
 		484B0C97201531B700D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		484B0C992015327B00D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/distanceTexts.plist; sourceTree = "<group>"; };
 		4859594220153756003FC320 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4859594520153A4F003FC320 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4859594620153A73003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4859594720153A76003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4859594820153A78003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/distanceTexts.plist; sourceTree = "<group>"; };
+		4859594A20153A82003FC320 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		489B74561FE99BBE0020B4CB /* StadionCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StadionCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489B74591FE99BBE0020B4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489B745B1FE99BBE0020B4CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +209,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				484B0C97201531B700D9BADE /* en */,
+				4859594620153A73003FC320 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4859594220153756003FC320 /* en */,
+				4859594720153A76003FC320 /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				489B745E1FE99BBE0020B4CB /* Base */,
+				4859594520153A4F003FC320 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				489B74631FE99BBE0020B4CB /* Base */,
+				4859594A20153A82003FC320 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -236,6 +245,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				484B0C992015327B00D9BADE /* en */,
+				4859594820153A78003FC320 /* Base */,
 			);
 			name = distanceTexts.plist;
 			sourceTree = "<group>";

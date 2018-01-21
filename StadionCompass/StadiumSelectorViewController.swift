@@ -103,7 +103,7 @@ class StadiumSelectorViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as! StadiumSelectorCell
         let Stadion: Stadium
         if isFiltering() {
             Stadion = filteredTeams.filter({$0.league == leagues![indexPath.section].key})[indexPath.row]
@@ -114,7 +114,7 @@ class StadiumSelectorViewController: UITableViewController {
         
         
         
-        var StadionText = Stadion.hometeam
+        cell.IconLabel.text = ""
         
         
         if let visitData = Stadion.getVisits() {
@@ -124,15 +124,15 @@ class StadiumSelectorViewController: UITableViewController {
                     let oldNumberOfVisits = data.value as! Int
                     if oldNumberOfVisits > 0{
                         visitedStadiums[indexPath.section] = visitedStadiums[indexPath.section]! + 1
-                        StadionText = "🏟️ " + Stadion.hometeam!
-                        
+                        cell.IconLabel.text = "🏟️"
                     }
                 }
             }
         }
         
-        
-        cell.textLabel?.text = StadionText
+        cell.TeamNameLabel.text = Stadion.hometeam
+        cell.StadiumNameLabel.text = Stadion.name
+      
 
         return cell
     }

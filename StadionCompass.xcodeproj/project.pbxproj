@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */; };
 		481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */; };
+		484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */; };
 		489B745A1FE99BBE0020B4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B74591FE99BBE0020B4CB /* AppDelegate.swift */; };
 		489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B745B1FE99BBE0020B4CB /* ViewController.swift */; };
 		489B745F1FE99BBE0020B4CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489B745D1FE99BBE0020B4CB /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmykUIColor.swift; sourceTree = "<group>"; };
 		481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorViewController.swift; sourceTree = "<group>"; };
+		484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorCell.swift; sourceTree = "<group>"; };
 		489B74561FE99BBE0020B4CB /* StadionCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StadionCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489B74591FE99BBE0020B4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489B745B1FE99BBE0020B4CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				489B74591FE99BBE0020B4CB /* AppDelegate.swift */,
 				489B746F1FE99FF70020B4CB /* supportfunctions.swift */,
 				481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */,
+				484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */,
 				489B745B1FE99BBE0020B4CB /* ViewController.swift */,
 				481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */,
 				489B745D1FE99BBE0020B4CB /* Main.storyboard */,
@@ -180,6 +183,7 @@
 				489B74721FE9A7650020B4CB /* Stadion.swift in Sources */,
 				489B74701FE99FF70020B4CB /* supportfunctions.swift in Sources */,
 				481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */,
+				484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

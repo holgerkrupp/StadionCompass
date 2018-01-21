@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  StadionCompass
+
+  Created by Holger Krupp on 21.01.18.
+  Copyright © 2018 Holger Krupp. All rights reserved.
+*/
+
+//StadiumSelectorViewController - All Strings used in the view where the user selects his stadium
+
+"stadiumtable.search"   =  "Search" // shown in searchbar
+"stadiumtable.title"    = "Select your team" // "shown in TableView"
+
+
+//ViewController - All Strings used in the view where the user selects his stadium
+"location.denied"   = "Please open Settings to allow location access" // "shown when location data is not shared"
+"location.denied"   = "Please open allow location access" // "title when location data is not requested"

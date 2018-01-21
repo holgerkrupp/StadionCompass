@@ -12,6 +12,7 @@
 		484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */; };
 		484B0C93201530D500D9BADE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484B0C92201530D400D9BADE /* Info.plist */; };
 		484B0C96201531B700D9BADE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 484B0C98201531B700D9BADE /* InfoPlist.strings */; };
+		4859594120153756003FC320 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859594320153756003FC320 /* Localizable.strings */; };
 		489B745A1FE99BBE0020B4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B74591FE99BBE0020B4CB /* AppDelegate.swift */; };
 		489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B745B1FE99BBE0020B4CB /* ViewController.swift */; };
 		489B745F1FE99BBE0020B4CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489B745D1FE99BBE0020B4CB /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		484B0C92201530D400D9BADE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		484B0C97201531B700D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		484B0C992015327B00D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/distanceTexts.plist; sourceTree = "<group>"; };
+		4859594220153756003FC320 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		489B74561FE99BBE0020B4CB /* StadionCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StadionCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489B74591FE99BBE0020B4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489B745B1FE99BBE0020B4CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				489B746D1FE99E510020B4CB /* StadionData.plist */,
 				484B0C92201530D400D9BADE /* Info.plist */,
 				48FAAB602011365F006C8D61 /* distanceTexts.plist */,
+				4859594320153756003FC320 /* Localizable.strings */,
 				484B0C98201531B700D9BADE /* InfoPlist.strings */,
 				489B74711FE9A7650020B4CB /* Stadion.swift */,
 			);
@@ -154,6 +157,7 @@
 				489B74611FE99BBE0020B4CB /* Assets.xcassets in Resources */,
 				484B0C93201530D500D9BADE /* Info.plist in Resources */,
 				48FAAB5E2011365F006C8D61 /* distanceTexts.plist in Resources */,
+				4859594120153756003FC320 /* Localizable.strings in Resources */,
 				489B745F1FE99BBE0020B4CB /* Main.storyboard in Resources */,
 				489B746E1FE99E510020B4CB /* StadionData.plist in Resources */,
 			);
@@ -202,6 +206,14 @@
 				484B0C97201531B700D9BADE /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4859594320153756003FC320 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4859594220153756003FC320 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		489B745D1FE99BBE0020B4CB /* Main.storyboard */ = {

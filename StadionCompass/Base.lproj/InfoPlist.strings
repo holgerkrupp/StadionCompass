@@ -7,5 +7,5 @@
 */
 "CFBundleDisplayName" = "Stadium";
 "CFBundleName" = "Stadium";
-"NSLocationUsageDescription" = "To show the correct direction";
-"NSLocationWhenInUseUsageDescription" = "To show the correct direction";
+"NSLocationUsageDescription" = "To show the correct direction to the stadium";
+"NSLocationWhenInUseUsageDescription" = "To show the correct direction to the stadium";

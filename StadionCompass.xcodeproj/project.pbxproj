@@ -10,12 +10,11 @@
 		481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */; };
 		481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */; };
 		484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */; };
-		484B0C93201530D500D9BADE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484B0C92201530D400D9BADE /* Info.plist */; };
-		484B0C96201531B700D9BADE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 484B0C98201531B700D9BADE /* InfoPlist.strings */; };
 		4859594120153756003FC320 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859594320153756003FC320 /* Localizable.strings */; };
+		4859595520153B67003FC320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4859595320153B67003FC320 /* Main.storyboard */; };
+		4859595820153BDE003FC320 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859595A20153BDE003FC320 /* InfoPlist.strings */; };
 		489B745A1FE99BBE0020B4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B74591FE99BBE0020B4CB /* AppDelegate.swift */; };
 		489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B745B1FE99BBE0020B4CB /* ViewController.swift */; };
-		489B745F1FE99BBE0020B4CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489B745D1FE99BBE0020B4CB /* Main.storyboard */; };
 		489B74611FE99BBE0020B4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489B74601FE99BBE0020B4CB /* Assets.xcassets */; };
 		489B74641FE99BBE0020B4CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489B74621FE99BBE0020B4CB /* LaunchScreen.storyboard */; };
 		489B746E1FE99E510020B4CB /* StadionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 489B746D1FE99E510020B4CB /* StadionData.plist */; };
@@ -28,21 +27,19 @@
 		481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmykUIColor.swift; sourceTree = "<group>"; };
 		481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorViewController.swift; sourceTree = "<group>"; };
 		484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorCell.swift; sourceTree = "<group>"; };
-		484B0C92201530D400D9BADE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		484B0C97201531B700D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		484B0C992015327B00D9BADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/distanceTexts.plist; sourceTree = "<group>"; };
-		4859594220153756003FC320 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4859594520153A4F003FC320 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		4859594620153A73003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4859594720153A76003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4859594820153A78003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/distanceTexts.plist; sourceTree = "<group>"; };
-		4859594A20153A82003FC320 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4859595620153B9B003FC320 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4859595B20153D00003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4859595C20153D00003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4859595D20153D50003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4859595E20153D5F003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/distanceTexts.plist; sourceTree = "<group>"; };
+		4859595F20153D66003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4859596020153D80003FC320 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4859596120153D80003FC320 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/distanceTexts.plist; sourceTree = "<group>"; };
+		4859596220153D81003FC320 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		489B74561FE99BBE0020B4CB /* StadionCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StadionCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489B74591FE99BBE0020B4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489B745B1FE99BBE0020B4CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		489B745E1FE99BBE0020B4CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		489B74601FE99BBE0020B4CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		489B74631FE99BBE0020B4CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		489B746D1FE99E510020B4CB /* StadionData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StadionData.plist; sourceTree = "<group>"; };
 		489B746F1FE99FF70020B4CB /* supportfunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supportfunctions.swift; sourceTree = "<group>"; };
 		489B74711FE9A7650020B4CB /* Stadion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stadion.swift; sourceTree = "<group>"; };
@@ -80,19 +77,19 @@
 			children = (
 				489B74591FE99BBE0020B4CB /* AppDelegate.swift */,
 				489B746F1FE99FF70020B4CB /* supportfunctions.swift */,
+				489B74711FE9A7650020B4CB /* Stadion.swift */,
 				481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */,
 				484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */,
 				489B745B1FE99BBE0020B4CB /* ViewController.swift */,
 				481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */,
-				489B745D1FE99BBE0020B4CB /* Main.storyboard */,
+				4859595320153B67003FC320 /* Main.storyboard */,
 				489B74601FE99BBE0020B4CB /* Assets.xcassets */,
 				489B74621FE99BBE0020B4CB /* LaunchScreen.storyboard */,
+				4859595620153B9B003FC320 /* Info.plist */,
 				489B746D1FE99E510020B4CB /* StadionData.plist */,
-				484B0C92201530D400D9BADE /* Info.plist */,
+				4859595A20153BDE003FC320 /* InfoPlist.strings */,
 				48FAAB602011365F006C8D61 /* distanceTexts.plist */,
 				4859594320153756003FC320 /* Localizable.strings */,
-				484B0C98201531B700D9BADE /* InfoPlist.strings */,
-				489B74711FE9A7650020B4CB /* Stadion.swift */,
 			);
 			path = StadionCompass;
 			sourceTree = "<group>";
@@ -141,6 +138,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 489B744D1FE99BBE0020B4CB;
 			productRefGroup = 489B74571FE99BBE0020B4CB /* Products */;
@@ -158,12 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				489B74641FE99BBE0020B4CB /* LaunchScreen.storyboard in Resources */,
-				484B0C96201531B700D9BADE /* InfoPlist.strings in Resources */,
+				4859595820153BDE003FC320 /* InfoPlist.strings in Resources */,
 				489B74611FE99BBE0020B4CB /* Assets.xcassets in Resources */,
-				484B0C93201530D500D9BADE /* Info.plist in Resources */,
+				4859595520153B67003FC320 /* Main.storyboard in Resources */,
 				48FAAB5E2011365F006C8D61 /* distanceTexts.plist in Resources */,
 				4859594120153756003FC320 /* Localizable.strings in Resources */,
-				489B745F1FE99BBE0020B4CB /* Main.storyboard in Resources */,
 				489B746E1FE99E510020B4CB /* StadionData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,38 +202,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		484B0C98201531B700D9BADE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				484B0C97201531B700D9BADE /* en */,
-				4859594620153A73003FC320 /* Base */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		4859594320153756003FC320 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4859594220153756003FC320 /* en */,
-				4859594720153A76003FC320 /* Base */,
+				4859595F20153D66003FC320 /* Base */,
+				4859596220153D81003FC320 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		489B745D1FE99BBE0020B4CB /* Main.storyboard */ = {
+		4859595320153B67003FC320 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				489B745E1FE99BBE0020B4CB /* Base */,
-				4859594520153A4F003FC320 /* en */,
+				4859595B20153D00003FC320 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4859595A20153BDE003FC320 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4859595D20153D50003FC320 /* Base */,
+				4859596020153D80003FC320 /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		489B74621FE99BBE0020B4CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				489B74631FE99BBE0020B4CB /* Base */,
-				4859594A20153A82003FC320 /* en */,
+				4859595C20153D00003FC320 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -244,8 +239,8 @@
 		48FAAB602011365F006C8D61 /* distanceTexts.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
-				484B0C992015327B00D9BADE /* en */,
-				4859594820153A78003FC320 /* Base */,
+				4859595E20153D5F003FC320 /* Base */,
+				4859596120153D80003FC320 /* de */,
 			);
 			name = distanceTexts.plist;
 			sourceTree = "<group>";
@@ -369,7 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				INFOPLIST_FILE = StadionCompass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,7 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				INFOPLIST_FILE = StadionCompass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";

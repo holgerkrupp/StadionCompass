@@ -71,11 +71,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        UIView.setAnimationsEnabled(true)
         self.navigationItem.setHidesBackButton(true, animated: animated);
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         self.navigationController?.navigationBar.isHidden = true
-        
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,7 +86,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways{
             NSLog("Auth ok")
-            
+            allowLocation.isHidden = true
             updateUI()
             
             
@@ -163,11 +162,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             heading = realheading
         }
         
+        
+        // correction to be applied when userinterface is not in alignment with device orientation
+        var correction = 0.0
+        switch UIApplication.shared.statusBarOrientation {
+        case .portrait:
+            correction = 0.0
+        case .portraitUpsideDown:
+            correction = 180.0
+        case .landscapeLeft:
+            correction = +90.0
+        case .landscapeRight:
+            correction = -90.0
+        case .unknown:
+            //default
+            break
+        }
+
+        
+        
         if userlocation != nil && targetlocation != nil{
-            
-            
-            
-            
             if let distance = calculateDistance(user: userlocation!, target: targetlocation!){
                 if distance > 1000{
                     let format = ".1"
@@ -176,31 +190,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     let format = ".0"
                     cityLabel.text = "\(floor(distance).format(f: format))m"
                 }
-                
-                
-                if distance < 200{
-                    stadion?.updateVisits()
-                    let colorheart = UIImage(named: "heart")?.withRenderingMode(.alwaysTemplate)
-                    arrowImage.tintColor = stadion?.arrowColor
-                    arrowImage.image = colorheart
-                    arrowImage.transform = CGAffineTransform(rotationAngle: 0)
-                    cityLabel.isHidden = true
-                }else{
-                    let colorArrow = UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate)
-                    arrowImage.tintColor = stadion?.arrowColor
-                    arrowImage.image = colorArrow
-                    cityLabel.isHidden = false
-                    let degrees = calculateAngle(user: userlocation!, target: targetlocation!)
-                    var stadiumheading =  degrees - heading
-                    stadiumheading = round(stadiumheading)
-                    degreesLabel.text = "\(stadiumheading)°"
-                    degreesLabel.isHidden = true
-                    UIView.animate(withDuration: 0.2, animations: {
-                        let rot =  CGFloat((stadiumheading * .pi) / 180)
-                        self.arrowImage.transform = CGAffineTransform(rotationAngle: rot)
-                    })
-                }
-                arrowImage.isHidden = false
                 
                 if let textDict = getDataFromPlist(plist: "distanceTexts", key: nil) as? NSDictionary
                 {
@@ -211,13 +200,46 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         if let meters = Int(item.key as! String){
                             if meters < tempmeters, meters > Int(distance) {
                                 tempmeters = meters
-                               // distanceText = item.value as? String
+                                // distanceText = item.value as? String
                                 distanceText = Bundle.main.localizedString(forKey: item.value as! String, value: nil, table: nil)
                             }
                         }
                     }
                     distanceTextLabel.text = distanceText
-                    distanceTextLabel.isHidden = false
+                    
+                
+                
+                if distance < 200{
+                    stadion?.updateVisits()
+                    let colorheart = UIImage(named: "heart")?.withRenderingMode(.alwaysTemplate)
+                    arrowImage.tintColor = stadion?.arrowColor
+                    arrowImage.image = colorheart
+                    arrowImage.transform = CGAffineTransform(rotationAngle: 0)
+                    cityLabel.isHidden = true
+                    
+                    if let slogan = stadion?.homeslogan, stadion?.homeslogan != ""{
+                        distanceTextLabel.text = slogan
+                    }
+                    
+                    
+                }else{
+                    let colorArrow = UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate)
+                    arrowImage.tintColor = stadion?.arrowColor
+                    arrowImage.image = colorArrow
+                    cityLabel.isHidden = false
+                    let degrees = calculateAngle(user: userlocation!, target: targetlocation!)
+                    var stadiumheading =  degrees - heading + correction
+                    stadiumheading = round(stadiumheading)
+                    degreesLabel.text = "\(stadiumheading)°"
+                    degreesLabel.isHidden = true
+                    UIView.animate(withDuration: 0.2, animations: {
+                        let rot =  CGFloat((stadiumheading * .pi) / 180)
+                        self.arrowImage.transform = CGAffineTransform(rotationAngle: rot)
+                    })
+                }
+                arrowImage.isHidden = false
+                distanceTextLabel.isHidden = false
+
                     
                 }else{
                     NSLog("error")
@@ -226,13 +248,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         if let visits = stadion?.getVisits(){
-            var lastVisit: String?
+          //  var lastVisit: String?
             var numberOfVisits: Int = 0
             for data in visits{
                 if data.key == "lastVisit", data.value is Date {
                     let formatter = DateFormatter()
                     formatter.dateStyle = DateFormatter.Style.short
-                    lastVisit = formatter.string(from: data.value as! Date)
+                  //  lastVisit = formatter.string(from: data.value as! Date)
                 }
                 if data.key == "numberOfVisists", data.value is Int {
                     numberOfVisits = data.value as! Int
@@ -275,6 +297,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if degrees < 0{
             degrees = degrees + 360
         }
+        
+
+        
         
         return degrees
     }

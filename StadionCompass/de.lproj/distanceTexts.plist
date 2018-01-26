@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>200</key>
-	<string>Welcome home</string>
+	<string>Willkommen zu Hause</string>
 	<key>5000</key>
-	<string>Come closer!</string>
+	<string>Komm näher</string>
 	<key>10000</key>
-	<string>Can you feel home?</string>
+	<string>Kannst Du dein zu Hause schon spüren?</string>
 	<key>100000</key>
-	<string>You will be home soon home</string>
+	<string>Bald bist Du wieder zu Hause.</string>
 	<key>500000</key>
-	<string>Don&apos;t stay away for long time!</string>
+	<string>Bleib nicht so lange weg.</string>
 	<key>1000000</key>
-	<string>Come home soon</string>
+	<string>Komm bald zurück nach Hause.</string>
 	<key>2000000</key>
-	<string>Feeling homesick?</string>
+	<string>Heimweh?</string>
 </dict>
 </plist>

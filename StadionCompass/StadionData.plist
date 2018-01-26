@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Bundesliga</key>
+	<key>🇩🇪 Bundesliga</key>
 	<dict>
 		<key>1. FSV Mainz 05</key>
 		<dict>
@@ -26,6 +26,8 @@
 		</dict>
 		<key>Werder Bremen</key>
 		<dict>
+			<key>homeslogan</key>
+			<string>Heb die Hände hoch, zeig den Werder Schal!</string>
 			<key>backgroundColor</key>
 			<string>#009662</string>
 			<key>textColor</key>
@@ -106,6 +108,8 @@
 		</dict>
 		<key>Bayern München</key>
 		<dict>
+			<key>homeslogan</key>
+			<string>Mir san hier</string>
 			<key>backgroundColor</key>
 			<string>#df2127</string>
 			<key>textColor</key>
@@ -126,12 +130,14 @@
 		</dict>
 		<key>Borussia Dortmund</key>
 		<dict>
+			<key>homeslogan</key>
+			<string>Wahre Liebe!</string>
 			<key>backgroundColor</key>
-			<string>#000000</string>
+			<string>#ffe800</string>
 			<key>textColor</key>
-			<string>#ffe800</string>
+			<string>#f000000</string>
 			<key>arrowColor</key>
-			<string>#ffe800</string>
+			<string>#f000000</string>
 			<key>name</key>
 			<string>Signal Iduna Park</string>
 			<key>city</key>
@@ -365,10 +371,12 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>Zweite Bundesliga</key>
+	<key>🇩🇪 Zweite Bundesliga</key>
 	<dict>
 		<key>FC St.Pauli</key>
 		<dict>
+			<key>homeslogan</key>
+			<string>We love St.Pauli!</string>
 			<key>backgroundColor</key>
 			<string>#5C4837</string>
 			<key>textColor</key>

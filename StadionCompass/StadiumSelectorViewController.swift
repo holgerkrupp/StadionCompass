@@ -25,7 +25,7 @@ class StadiumSelectorViewController: UITableViewController {
         super.viewDidLoad()
         
        allTeams = loadTeams()
-        if let stadium = getObjectForKeyFromPersistentStorrage("homestadium") as? String{
+        if (getObjectForKeyFromPersistentStorrage("homestadium") as? String) != nil{
             UIView.setAnimationsEnabled(false)
             performSegue(withIdentifier: "showNavigator", sender: self)
         }else{

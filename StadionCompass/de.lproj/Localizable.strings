@@ -16,3 +16,5 @@
 "location.denied"   = "Bitte erlaube den Zugriff auf deinen Standort in den Einstellungen"; // "shown when location data is not shared"
 "location.deniedbutton"   = "Einstellungen öffnen"; // "title when location data is not requested"
 "compassView.visitCounter"  = "Du warst schon %d mal hier."; // "Text to display the message how often a stadium has been visited - with %d beeing the number of visits"
+
+"notification.closeby" = "Du bist in der Nähe eines Stadions";

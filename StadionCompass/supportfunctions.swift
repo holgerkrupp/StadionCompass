@@ -39,6 +39,10 @@ func getObjectForKeyFromPersistentStorrage(_ key:String) -> Any?{
     }
 }
 
+func removeObjectForKeyFromPersistentStorrage(_ key:String){
+    UserDefaults.standard.removeObject(forKey: key)
+}
+
 func removePersistentStorrage(){
     let appdomain = Bundle.main.bundleIdentifier
     UserDefaults.standard.removePersistentDomain(forName: appdomain!)

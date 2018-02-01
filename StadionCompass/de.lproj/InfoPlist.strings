@@ -9,3 +9,4 @@
 "CFBundleName" = "Stadion";
 "NSLocationUsageDescription" = "Um die koreekte Richtung zum Stadion anzuzeigen";
 "NSLocationWhenInUseUsageDescription" = "Um die koreekte Richtung zum Stadion anzuzeigen";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Um bescheid zu geben, wenn du in der Nähe des Stadions bist";

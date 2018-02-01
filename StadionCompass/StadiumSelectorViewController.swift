@@ -8,9 +8,10 @@
 
 import UIKit
 
-class StadiumSelectorViewController: UITableViewController {
+class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerDelegate {
 
     var leagues = (getDataFromPlist(plist: "StadionData", key: nil) as? Dictionary<String, Any>)?.sorted(by: { $0.key < $1.key })
+    
     var allTeams = [Stadium]()
     var filteredTeams = [Stadium]()
     
@@ -23,7 +24,7 @@ class StadiumSelectorViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
        allTeams = loadTeams()
         if (getObjectForKeyFromPersistentStorrage("homestadium") as? String) != nil{
             UIView.setAnimationsEnabled(false)
@@ -60,7 +61,11 @@ class StadiumSelectorViewController: UITableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         UIView.setAnimationsEnabled(true)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+     
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,14 +85,19 @@ class StadiumSelectorViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-       let _ = "\(leagues![section].key)  (\(visitedStadiums[section] ?? 0) / \(allStadiums[section] ?? 0))"
+        
+        let leagueName = leagues![section].key.split(separator: "|").last  ?? ""
+        
+        
+        let _ = "\(leagueName)  (\(visitedStadiums[section] ?? 0) / \(allStadiums[section] ?? 0))"
         var visits : Int?
         if let leagueVisits = getObjectForKeyFromPersistentStorrage(leagues![section].key) as? Int{
             visits = leagueVisits
         }
         
         
-        return "\(leagues![section].key)  (\(visits ?? 0) / \(allStadiums[section] ?? 0))"
+        
+        return "\(leagueName)  (\(visits ?? 0) / \(allStadiums[section] ?? 0))"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

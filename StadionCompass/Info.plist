@@ -19,9 +19,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>330</string>
+	<string>394</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To show the correct direction and notify you near to your stadium</string>
 	<key>NSLocationUsageDescription</key>
 	<string>To show the correct direction</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

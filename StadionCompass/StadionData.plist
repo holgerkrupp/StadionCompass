@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>🇩🇪 Bundesliga</key>
+	<key>1|🇩🇪 Bundesliga</key>
 	<dict>
 		<key>1. FSV Mainz 05</key>
 		<dict>
@@ -135,9 +135,9 @@
 			<key>backgroundColor</key>
 			<string>#ffe800</string>
 			<key>textColor</key>
-			<string>#f000000</string>
+			<string>#000000</string>
 			<key>arrowColor</key>
-			<string>#f000000</string>
+			<string>#000000</string>
 			<key>name</key>
 			<string>Signal Iduna Park</string>
 			<key>city</key>
@@ -371,7 +371,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>🇩🇪 Zweite Bundesliga</key>
+	<key>2|🇩🇪 2. Bundesliga</key>
 	<dict>
 		<key>FC St.Pauli</key>
 		<dict>
@@ -733,6 +733,1687 @@
 				<real>49.434722</real>
 				<key>lon</key>
 				<real>7.776667</real>
+			</dict>
+		</dict>
+	</dict>
+	<key>3|🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</key>
+	<dict>
+		<key>FC Arsenal</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#EF0107</string>
+			<key>textColor</key>
+			<string>#023474</string>
+			<key>arrowColor</key>
+			<string>#023474</string>
+			<key>name</key>
+			<string>Emirates Stadium</string>
+			<key>city</key>
+			<string>London</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.554888</real>
+				<key>lon</key>
+				<real>-0.108438</real>
+			</dict>
+		</dict>
+		<key>AFC Bournemouth</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#000000</string>
+			<key>textColor</key>
+			<string>#E62333</string>
+			<key>arrowColor</key>
+			<string>#E62333</string>
+			<key>name</key>
+			<string>Vitality Stadium</string>
+			<key>city</key>
+			<string>Bournemouth</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>50.735231</real>
+				<key>lon</key>
+				<real>-1.838279</real>
+			</dict>
+		</dict>
+		<key>Brighton &amp; Hove Albion</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#0054A6</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>AMEX Stadium</string>
+			<key>city</key>
+			<string>Brighton</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>50.861565</real>
+				<key>lon</key>
+				<real>-0.083716</real>
+			</dict>
+		</dict>
+		<key>FC Burnley</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#8CCCE5</string>
+			<key>textColor</key>
+			<string>#53162F</string>
+			<key>arrowColor</key>
+			<string>#53162F</string>
+			<key>name</key>
+			<string>Turf Moor</string>
+			<key>city</key>
+			<string>Burnley</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>53.789024</real>
+				<key>lon</key>
+				<real>-2.230174</real>
+			</dict>
+		</dict>
+		<key>FC Chelsea</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#034694</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Stamford Bridge</string>
+			<key>city</key>
+			<string>London</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.481663</real>
+				<key>lon</key>
+				<real>-0.190956</real>
+			</dict>
+		</dict>
+		<key>Crystal Palace</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#1B458F</string>
+			<key>textColor</key>
+			<string>#C4122E</string>
+			<key>arrowColor</key>
+			<string>#C4122E</string>
+			<key>name</key>
+			<string>Selhurst Park</string>
+			<key>city</key>
+			<string>London</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.398326</real>
+				<key>lon</key>
+				<real>-0.08659500000000001</real>
+			</dict>
+		</dict>
+		<key>FC Everton</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#274488</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Goodison Park</string>
+			<key>city</key>
+			<string>Liverpool</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>53.438787</real>
+				<key>lon</key>
+				<real>-2.966319</real>
+			</dict>
+		</dict>
+		<key>Huddersfield Town</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#0072CE</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>John Smith&apos;s Stadium</string>
+			<key>city</key>
+			<string>Huddersfield</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>53.654282</real>
+				<key>lon</key>
+				<real>-1.768252</real>
+			</dict>
+		</dict>
+		<key>Leicester City</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#0053A0</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>King Power Stadium</string>
+			<key>city</key>
+			<string>Leicester</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>52.620366</real>
+				<key>lon</key>
+				<real>-1.142189</real>
+			</dict>
+		</dict>
+		<key>FC Liverpool</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#D00027</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Anfield</string>
+			<key>city</key>
+			<string>Liverpool</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>53.430829</real>
+				<key>lon</key>
+				<real>-2.96083</real>
+			</dict>
+		</dict>
+		<key>Manchester City</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#5CBFEB</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Etihad Stadium</string>
+			<key>city</key>
+			<string>Manchester</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>53.483138</real>
+				<key>lon</key>
+				<real>-2.200395</real>
+			</dict>
+		</dict>
+		<key>Manchester United</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#DA020E</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Old Trafford</string>
+			<key>city</key>
+			<string>Manchester</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>53.463059</real>
+				<key>lon</key>
+				<real>-2.29134</real>
+			</dict>
+		</dict>
+		<key>Newcastle United</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#000000</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>St James&apos; Park</string>
+			<key>city</key>
+			<string>Newcastle upon Tyne</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>54.975556</real>
+				<key>lon</key>
+				<real>-1.621667</real>
+			</dict>
+		</dict>
+		<key>FC Southampton</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#ED1A3B</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>St Mary&apos;s Stadium</string>
+			<key>city</key>
+			<string>Southampton</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>50.905822</real>
+				<key>lon</key>
+				<real>-1.390954</real>
+			</dict>
+		</dict>
+		<key>Stoke City</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#E03A3E</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>bet365 Stadium</string>
+			<key>city</key>
+			<string>Stoke-on-Trent</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>52.988105</real>
+				<key>lon</key>
+				<real>-2.17643</real>
+			</dict>
+		</dict>
+		<key>Swansea City</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#000000</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Liberty Stadium</string>
+			<key>city</key>
+			<string>Swansea</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.64275</real>
+				<key>lon</key>
+				<real>-3.934586</real>
+			</dict>
+		</dict>
+		<key>Tottenham Hotspur</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#001C58</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Wembley Stadium</string>
+			<key>city</key>
+			<string>London</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.556021</real>
+				<key>lon</key>
+				<real>-0.279519</real>
+			</dict>
+		</dict>
+		<key>FC Watford</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FBEE23</string>
+			<key>textColor</key>
+			<string>#ED2127</string>
+			<key>arrowColor</key>
+			<string>#ED2127</string>
+			<key>name</key>
+			<string>Vicarage Road</string>
+			<key>city</key>
+			<string>Watford</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.649983</real>
+				<key>lon</key>
+				<real>-0.401688</real>
+			</dict>
+		</dict>
+		<key>West Bromwich Albion</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#091453</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>The Hawthorns</string>
+			<key>city</key>
+			<string>West Bromwich</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>52.509038</real>
+				<key>lon</key>
+				<real>-1.963938</real>
+			</dict>
+		</dict>
+		<key>West Ham United</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#60223B</string>
+			<key>textColor</key>
+			<string>#5299C6</string>
+			<key>arrowColor</key>
+			<string>#5299C6</string>
+			<key>name</key>
+			<string>London Stadium</string>
+			<key>city</key>
+			<string>London</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.53871</real>
+				<key>lon</key>
+				<real>-0.016604</real>
+			</dict>
+		</dict>
+	</dict>
+	<key>4|🇪🇸 La Liga</key>
+	<dict>
+		<key>Deportivo Alavés</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#2572AE</string>
+			<key>arrowColor</key>
+			<string>#2572AE</string>
+			<key>name</key>
+			<string>Estadio de Mendizorroza</string>
+			<key>city</key>
+			<string>Vitoria-Gasteiz</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>42.8370858</real>
+				<key>lon</key>
+				<real>-2.6882436</real>
+			</dict>
+		</dict>
+		<key>Athletic Bilbao</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#8A477B</string>
+			<key>arrowColor</key>
+			<string>#8A477B</string>
+			<key>name</key>
+			<string>Estadio San Mamés</string>
+			<key>city</key>
+			<string>Bilbao</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>43.26428442</real>
+				<key>lon</key>
+				<real>-2.94939995</real>
+			</dict>
+		</dict>
+		<key>Atlético Madrid</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#D42E12</string>
+			<key>arrowColor</key>
+			<string>#D42E12</string>
+			<key>name</key>
+			<string>Estadio Wanda Metropolitano</string>
+			<key>city</key>
+			<string>Madrid</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>40.4363642</real>
+				<key>lon</key>
+				<real>3.5995861</real>
+			</dict>
+		</dict>
+		<key>FC Barcelona</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FCEE4F</string>
+			<key>textColor</key>
+			<string>#C92A38</string>
+			<key>arrowColor</key>
+			<string>#C92A38</string>
+			<key>name</key>
+			<string>Camp Nou</string>
+			<key>city</key>
+			<string>Barcelona</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.380896</real>
+				<key>lon</key>
+				<real>2.1228198</real>
+			</dict>
+		</dict>
+		<key>Celta de Vigo</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#96BADD</string>
+			<key>textColor</key>
+			<string>#750040</string>
+			<key>arrowColor</key>
+			<string>#750040</string>
+			<key>name</key>
+			<string>Estadio de Balaídos</string>
+			<key>city</key>
+			<string>Pontevedra</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>42.212398</real>
+				<key>lon</key>
+				<real>-8.740087300000001</real>
+			</dict>
+		</dict>
+		<key>Deportivo de La Coruña</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#8A477B</string>
+			<key>textColor</key>
+			<string>#8A477B</string>
+			<key>arrowColor</key>
+			<string>#8A477B</string>
+			<key>name</key>
+			<string>Estadio Municipal de Riazor</string>
+			<key>city</key>
+			<string>Galicia</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>43.3687184</real>
+				<key>lon</key>
+				<real>-8.417483499999999</real>
+			</dict>
+		</dict>
+		<key>SD Eibar</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#750040</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Estadio Municipal de Ipurua</string>
+			<key>city</key>
+			<string>Eibar</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>43.1817756</real>
+				<key>lon</key>
+				<real>2.4759683</real>
+			</dict>
+		</dict>
+		<key>RCD Espanyol</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#96BADD</string>
+			<key>textColor</key>
+			<string>#750040</string>
+			<key>arrowColor</key>
+			<string>#750040</string>
+			<key>name</key>
+			<string>RCDE Stadium</string>
+			<key>city</key>
+			<string>Cornella</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.3479735</real>
+				<key>lon</key>
+				<real>2.0747653</real>
+			</dict>
+		</dict>
+		<key>Getafé CF</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#F03121</string>
+			<key>arrowColor</key>
+			<string>#F03121</string>
+			<key>name</key>
+			<string>Coliseum Alfonso Pérez</string>
+			<key>city</key>
+			<string>Getafe</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>40.3257267</real>
+				<key>lon</key>
+				<real>3.7149399</real>
+			</dict>
+		</dict>
+		<key>UD Las Palmas</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFDF1A</string>
+			<key>textColor</key>
+			<string>#00529F</string>
+			<key>arrowColor</key>
+			<string>#00529F</string>
+			<key>name</key>
+			<string>Estadio Gran Canaria</string>
+			<key>city</key>
+			<string>Las Palmas de Gran Canaria</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>28.1004063</real>
+				<key>lon</key>
+				<real>-15.4567456</real>
+			</dict>
+		</dict>
+		<key>CD Leganés</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#0000FF</string>
+			<key>arrowColor</key>
+			<string>#0000FF</string>
+			<key>name</key>
+			<string>Estadio Municipal de Butarque</string>
+			<key>city</key>
+			<string>Madrid</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>40.3405167</real>
+				<key>lon</key>
+				<real>-3.7603744</real>
+			</dict>
+		</dict>
+		<key>Málaga CF</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#589FEA</string>
+			<key>arrowColor</key>
+			<string>#589FEA</string>
+			<key>name</key>
+			<string>Estadio La Rosaleda</string>
+			<key>city</key>
+			<string>Málaga</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>36.7335796</real>
+				<key>lon</key>
+				<real>-4.4266511</real>
+			</dict>
+		</dict>
+		<key>Girona FC</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#CD2534</string>
+			<key>arrowColor</key>
+			<string>#CD2534</string>
+			<key>name</key>
+			<string>Estadi Municipal Montilivi</string>
+			<key>city</key>
+			<string>Girona</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.9612101</real>
+				<key>lon</key>
+				<real>2.8283951</real>
+			</dict>
+		</dict>
+		<key>Real Madrid C.F.</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#000000</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>Santiago Bernabéu</string>
+			<key>city</key>
+			<string>Madrid</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>40.4530541</real>
+				<key>lon</key>
+				<real>-3.6883445</real>
+			</dict>
+		</dict>
+		<key>Real Sociedad</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#005A9F</string>
+			<key>arrowColor</key>
+			<string>#005A9F</string>
+			<key>name</key>
+			<string>Estadio Anoeta</string>
+			<key>city</key>
+			<string>San Sebastian</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>43.3013934</real>
+				<key>lon</key>
+				<real>-1.973682</real>
+			</dict>
+		</dict>
+		<key>Sevilla FC</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#000000</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>Estadio Ramón Sánchez-Pizjuán</string>
+			<key>city</key>
+			<string>Sevilla</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>37.3840655</real>
+				<key>lon</key>
+				<real>-5.9706902</real>
+			</dict>
+		</dict>
+		<key>Betis Sevilla</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#4E4804</string>
+			<key>arrowColor</key>
+			<string>#4E4804</string>
+			<key>name</key>
+			<string>Estadio Benito Villamarín</string>
+			<key>city</key>
+			<string>Sevilla</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>37.3565037</real>
+				<key>lon</key>
+				<real>-5.9817521</real>
+			</dict>
+		</dict>
+		<key>Valencia CF</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#000000</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>Estadio de Mestalla</string>
+			<key>city</key>
+			<string>Valencia</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>39.4746042</real>
+				<key>lon</key>
+				<real>-0.358225</real>
+			</dict>
+		</dict>
+		<key>Villarreal CF</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFE667</string>
+			<key>textColor</key>
+			<string>#F8F132</string>
+			<key>arrowColor</key>
+			<string>#F8F132</string>
+			<key>name</key>
+			<string>Estadio de la Cerámica</string>
+			<key>city</key>
+			<string>Castellon</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>39.9441007</real>
+				<key>lon</key>
+				<real>-0.1035332</real>
+			</dict>
+		</dict>
+		<key>Levante UD</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#B4053F</string>
+			<key>textColor</key>
+			<string>#005CA5</string>
+			<key>arrowColor</key>
+			<string>#005CA5</string>
+			<key>name</key>
+			<string>Estadi Ciutat de València</string>
+			<key>city</key>
+			<string>Valencia</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>39.494898</real>
+				<key>lon</key>
+				<real>-0.365055</real>
+			</dict>
+		</dict>
+	</dict>
+	<key>5|Other</key>
+	<dict>
+		<key>Fenerbahçe Spor Kulübü</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFED00</string>
+			<key>textColor</key>
+			<string>#163962</string>
+			<key>arrowColor</key>
+			<string>#163962</string>
+			<key>name</key>
+			<string>Şükrü Saracoğlu Stadı</string>
+			<key>city</key>
+			<string>İstanbul</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>40.987689</real>
+				<key>lon</key>
+				<real>29.036565</real>
+			</dict>
+		</dict>
+		<key>Beşiktaş Jimnastik Kulübü</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#000000</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>Vodafone Park</string>
+			<key>city</key>
+			<string>İstanbul</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.039395</real>
+				<key>lon</key>
+				<real>28.994109</real>
+			</dict>
+		</dict>
+		<key>Galatasaray Spor Kulübü</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FD9C00</string>
+			<key>textColor</key>
+			<string>#920229</string>
+			<key>arrowColor</key>
+			<string>#920229</string>
+			<key>name</key>
+			<string>Türk Telekom Stadyumu</string>
+			<key>city</key>
+			<string>İstanbul</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.103203</real>
+				<key>lon</key>
+				<real>28.991243</real>
+			</dict>
+		</dict>
+		<key>Feyenoord Rotterdam</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#E2001A</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Stadion Feijenoord</string>
+			<key>city</key>
+			<string>Rotterdam</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.893904</real>
+				<key>lon</key>
+				<real>4.523135</real>
+			</dict>
+		</dict>
+		<key>AFC Ajax</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#F20D12</string>
+			<key>arrowColor</key>
+			<string>#F20D12</string>
+			<key>name</key>
+			<string>Amsterdam ArenA</string>
+			<key>city</key>
+			<string>Amsterdam</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>52.314371</real>
+				<key>lon</key>
+				<real>4.941964</real>
+			</dict>
+		</dict>
+		<key>PSV Eindhoven</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#E2001A</string>
+			<key>arrowColor</key>
+			<string>#E2001A</string>
+			<key>name</key>
+			<string>Philips-Stadion</string>
+			<key>city</key>
+			<string>Eindhoven</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.441734</real>
+				<key>lon</key>
+				<real>5.467448</real>
+			</dict>
+		</dict>
+		<key>Paris Saint-Germain</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#003B66</string>
+			<key>textColor</key>
+			<string>#9C183E</string>
+			<key>arrowColor</key>
+			<string>#9C183E</string>
+			<key>name</key>
+			<string>Parc des Princes</string>
+			<key>city</key>
+			<string>Paris</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>48.841436</real>
+				<key>lon</key>
+				<real>2.253049</real>
+			</dict>
+		</dict>
+		<key>Olympique Lyonnais</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#003A80</string>
+			<key>arrowColor</key>
+			<string>#003A80</string>
+			<key>name</key>
+			<string>Groupama Stadium</string>
+			<key>city</key>
+			<string>Lyon</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>45.765295</real>
+				<key>lon</key>
+				<real>4.982029</real>
+			</dict>
+		</dict>
+		<key>Olympique de Marseille</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#009DDC</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Stade Vélodrome</string>
+			<key>city</key>
+			<string>Marseille</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>43.269827</real>
+				<key>lon</key>
+				<real>5.395887</real>
+			</dict>
+		</dict>
+		<key>Juventus Football Club</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#000000</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>Allianz Stadium</string>
+			<key>city</key>
+			<string>Torino</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>45.109569</real>
+				<key>lon</key>
+				<real>7.641264</real>
+			</dict>
+		</dict>
+		<key>Società Sportiva Calcio Napoli</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#158EC6</string>
+			<key>textColor</key>
+			<string>#043F88</string>
+			<key>arrowColor</key>
+			<string>#043F88</string>
+			<key>name</key>
+			<string>Stadio San Paolo</string>
+			<key>city</key>
+			<string>Napoli</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>40.827936</real>
+				<key>lon</key>
+				<real>14.193061</real>
+			</dict>
+		</dict>
+		<key>Società Sportiva Lazio</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#009EE0</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Stadio Olimpico di Roma</string>
+			<key>city</key>
+			<string>Rōma</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.934077</real>
+				<key>lon</key>
+				<real>12.454725</real>
+			</dict>
+		</dict>
+		<key>Associazione Sportiva Roma</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#F89823</string>
+			<key>textColor</key>
+			<string>#B40235</string>
+			<key>arrowColor</key>
+			<string>#B40235</string>
+			<key>name</key>
+			<string>Stadio Olimpico di Roma</string>
+			<key>city</key>
+			<string>Rōma</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.934077</real>
+				<key>lon</key>
+				<real>12.454725</real>
+			</dict>
+		</dict>
+		<key>Associazione Calcio Milan</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#E30013</string>
+			<key>textColor</key>
+			<string>#000000</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>Stadio Giuseppe Meazza</string>
+			<key>city</key>
+			<string>Milan</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>45.478124</real>
+				<key>lon</key>
+				<real>9.123962000000001</real>
+			</dict>
+		</dict>
+		<key>Football Club Internazionale Milano</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#000000</string>
+			<key>textColor</key>
+			<string>#0154A0</string>
+			<key>arrowColor</key>
+			<string>#0154A0</string>
+			<key>name</key>
+			<string>Stadio Giuseppe Meazza</string>
+			<key>city</key>
+			<string>Milan</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>45.478124</real>
+				<key>lon</key>
+				<real>9.123962000000001</real>
+			</dict>
+		</dict>
+		<key>ACF Fiorentina</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#7F2971</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Stadio Comunale Artemio Franchi</string>
+			<key>city</key>
+			<string>Firenze</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>43.780835</real>
+				<key>lon</key>
+				<real>11.282572</real>
+			</dict>
+		</dict>
+		<key>Futebol Clube do Porto</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#005D9C</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Estádio do Dragão</string>
+			<key>city</key>
+			<string>Porto</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>41.16177</real>
+				<key>lon</key>
+				<real>-8.583591</real>
+			</dict>
+		</dict>
+		<key>Sport Lisboa e Benfica</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#EE3124</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Estádio da Luz</string>
+			<key>city</key>
+			<string>Lisboa</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>38.752711</real>
+				<key>lon</key>
+				<real>-9.184774000000001</real>
+			</dict>
+		</dict>
+		<key>Sporting Clube de Portugal</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#008057</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Estádio José Alvalade XXI</string>
+			<key>city</key>
+			<string>Lisboa</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>38.76123</real>
+				<key>lon</key>
+				<real>-9.161796000000001</real>
+			</dict>
+		</dict>
+		<key>Association Sportive de Monaco</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FF0000</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Stade Louis II</string>
+			<key>city</key>
+			<string>Principauté de Monaco</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>43.727588</real>
+				<key>lon</key>
+				<real>43.727588</real>
+			</dict>
+		</dict>
+		<key>The Celtic Football Club</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#008A57</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Celtic Park</string>
+			<key>city</key>
+			<string>Glesga</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>55.849696</real>
+				<key>lon</key>
+				<real>-4.205543</real>
+			</dict>
+		</dict>
+		<key>Rangers Football Club</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#074286</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Ibrox Stadium</string>
+			<key>city</key>
+			<string>Glesga</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>55.853172</real>
+				<key>lon</key>
+				<real>-4.309269</real>
+			</dict>
+		</dict>
+		<key>Royal Sporting Club Anderlecht</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#522680</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Constant-Vanden-Stock-Stadion</string>
+			<key>city</key>
+			<string>Anderlecht</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>50.834161</real>
+				<key>lon</key>
+				<real>4.298339</real>
+			</dict>
+		</dict>
+		<key>Olympiakos Peiraios</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FF0000</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Georgios-Karaiskakis-Stadion</string>
+			<key>city</key>
+			<string>Pireas</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>37.946585</real>
+				<key>lon</key>
+				<real>23.6644</real>
+			</dict>
+		</dict>
+		<key>ZSKA Moskwa</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#DB0013</string>
+			<key>textColor</key>
+			<string>#00348C</string>
+			<key>arrowColor</key>
+			<string>#00348C</string>
+			<key>name</key>
+			<string>WEB Arena</string>
+			<key>city</key>
+			<string>Moskwa</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>55.791707</real>
+				<key>lon</key>
+				<real>37.516154</real>
+			</dict>
+		</dict>
+		<key>Spartak-Moskwa</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#DD0027</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Otkrytije Arena</string>
+			<key>city</key>
+			<string>Moskwa</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>55.817795</real>
+				<key>lon</key>
+				<real>37.440701</real>
+			</dict>
+		</dict>
+		<key>Futbolny klub Senit Sankt-Peterburg</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#00A5F1</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Sankt-Petersburg-Stadion</string>
+			<key>city</key>
+			<string>Sankt-Peterburg</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>59.973047</real>
+				<key>lon</key>
+				<real>30.220247</real>
+			</dict>
+		</dict>
+		<key>Fußballclub Hansa Rostock</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#0000FE</string>
+			<key>arrowColor</key>
+			<string>#0000FE</string>
+			<key>name</key>
+			<string>Ostseestadion</string>
+			<key>city</key>
+			<string>Rostock</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>54.084948</real>
+				<key>lon</key>
+				<real>12.095165</real>
+			</dict>
+		</dict>
+		<key>Karlsruher Sport-Club</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#003798</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Wildparkstadion</string>
+			<key>city</key>
+			<string>Karlsruhe</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>49.020028</real>
+				<key>lon</key>
+				<real>8.413029999999999</real>
+			</dict>
+		</dict>
+		<key>FC Basel 1893</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#E50022</string>
+			<key>textColor</key>
+			<string>#063887</string>
+			<key>arrowColor</key>
+			<string>#063887</string>
+			<key>name</key>
+			<string>St. Jakob-Park</string>
+			<key>city</key>
+			<string>Basel</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>47.541589</real>
+				<key>lon</key>
+				<real>7.620076</real>
+			</dict>
+		</dict>
+		<key>Legia Warszawa</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#E2001A</string>
+			<key>arrowColor</key>
+			<string>#E2001A</string>
+			<key>name</key>
+			<string>Stadion Wojska Polskiego</string>
+			<key>city</key>
+			<string>Warszawa</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>52.220461</real>
+				<key>lon</key>
+				<real>21.040628</real>
+			</dict>
+		</dict>
+		<key>Red Bull Salzburg</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#FF0000</string>
+			<key>arrowColor</key>
+			<string>#FF0000</string>
+			<key>name</key>
+			<string>Red Bull Arena</string>
+			<key>city</key>
+			<string>Salzburg</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>47.816282</real>
+				<key>lon</key>
+				<real>12.998215</real>
+			</dict>
+		</dict>
+		<key>Sportklub Rapid Wien</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#007A4B</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Allianz Stadion</string>
+			<key>city</key>
+			<string>Wien</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>48.198023</real>
+				<key>lon</key>
+				<real>16.266021</real>
+			</dict>
+		</dict>
+		<key>Fußballklub Austria Wien</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#441678</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Generali Arena</string>
+			<key>city</key>
+			<string>Wien</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>48.162353</real>
+				<key>lon</key>
+				<real>16.387128</real>
+			</dict>
+		</dict>
+		<key>Grasshopper Club Zürich</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#0E70B3</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Stadion Letzigrund</string>
+			<key>city</key>
+			<string>Zürich</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>47.382666</real>
+				<key>lon</key>
+				<real>8.503807999999999</real>
+			</dict>
+		</dict>
+		<key>Berner Sport Club Young Boys</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#F9CC11</string>
+			<key>textColor</key>
+			<string>#FF0000</string>
+			<key>arrowColor</key>
+			<string>#FF0000</string>
+			<key>name</key>
+			<string> Stade de Suisse Wankdorf Bern</string>
+			<key>city</key>
+			<string>Bern</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>46.963112</real>
+				<key>lon</key>
+				<real>7.464874</real>
 			</dict>
 		</dict>
 	</dict>

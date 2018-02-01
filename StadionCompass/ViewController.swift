@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import UserNotifications
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var homeLabel: UILabel!
@@ -32,9 +33,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
-
-   
-    
     var stadion : Stadium?
     let locationManager = CLLocationManager.init()
     
@@ -43,26 +41,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         allowLocation.isHidden = true
-        if let stadionID = getObjectForKeyFromPersistentStorrage("homestadium") as? String
+        var stadionID = ""
+        if let tempID = getObjectForKeyFromPersistentStorrage("tempStadium") as? String {
+            stadionID = tempID
+            removeObjectForKeyFromPersistentStorrage("tempStadium")
+        }else if let homeID = getObjectForKeyFromPersistentStorrage("homestadium") as? String{
+            stadionID = homeID
+        }
+        stadion = Stadium.init(stadionID: stadionID)
+        if stadion?.name != nil, stadion?.name != ""
         {
-       // stadion = loadStadium(stadionID: stadionID!)
-            stadion = Stadium.init(stadionID: stadionID)
-        
-        nameLabel.text = stadion?.name
-        cityLabel.text = stadion?.city
-        homeLabel.text = stadion?.hometeam
-        
-        self.view.backgroundColor = stadion?.bgColor
-        homeLabel.textColor = stadion?.textColor
-        cityLabel.textColor = stadion?.textColor
-        nameLabel.textColor = stadion?.textColor
-        infoButton.tintColor = stadion?.textColor
-        CounterLabel.textColor = stadion?.textColor
-        degreesLabel.textColor = stadion?.textColor
-        distanceTextLabel.textColor = stadion?.textColor
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        updateLocation()
+         
+           // stadion = Stadium.init(stadionID: stadionID)
+            
+            nameLabel.text = stadion?.name
+            cityLabel.text = stadion?.city
+            homeLabel.text = stadion?.hometeam
+            
+            self.view.backgroundColor = stadion?.bgColor
+            
+            
+            
+            homeLabel.textColor = stadion?.textColor
+            cityLabel.textColor = stadion?.textColor
+            nameLabel.textColor = stadion?.textColor
+            infoButton.tintColor = stadion?.textColor
+            CounterLabel.textColor = stadion?.textColor
+            degreesLabel.textColor = stadion?.textColor
+            distanceTextLabel.textColor = stadion?.textColor
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            updateLocation()
         }
     }
     
@@ -81,30 +90,98 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         updateLocation()
     }
     
+    func startgeofencing(){
+        if let stadium = stadion{
+            
+            //should use only one of those two - currently testing which works better.
+          //  setlocationNotificationfor(stadium: stadium)
+            startMonitoring(stadium: stadium)
+        }
+  
+    }
+    
+    func region(withLocation target:CLLocationCoordinate2D) -> CLCircularRegion {
+        var regionID = "hometeam"
+        
+        if let stadiumID = stadion?.hometeam{
+            regionID = stadiumID
+        }
+            let region = CLCircularRegion(center: target, radius: 200, identifier: regionID)
+            region.notifyOnEntry = true
+            region.notifyOnExit = false
+            return region
+    }
+    
     func updateLocation(){
         degreesLabel.text = "checking location"
-        
+        NSLog("update Location")
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways{
             NSLog("Auth ok")
             allowLocation.isHidden = true
-            updateUI()
-            
+            self.view.setNeedsDisplay()
+            startUpdatingUI()
+            if CLLocationManager.authorizationStatus() == .authorizedAlways{
+                
+                let centre = UNUserNotificationCenter.current()
+                centre.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+                    self.startgeofencing()
+                    // Enable or disable features based on authorization
+                }
+            }
             
         }else if CLLocationManager.authorizationStatus() == .notDetermined{
             degreesLabel.text = "please allow location"
-            
-            
-            
-            
+
             askforLocation()
-            updateUI()
+            startUpdatingUI()
         }else if CLLocationManager.authorizationStatus() == .denied{
             locationDenied()
         }
     }
     
+    func setlocationNotificationfor(stadium: Stadium){
+        let centre = UNUserNotificationCenter.current()
+        centre.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != UNAuthorizationStatus.authorized {
+                
+            } else {
+               
+                
+
+                    if let stadionLocation = stadium.location?.coordinate{
+                        
+                        let trigger = UNLocationNotificationTrigger(region: self.region(withLocation: stadionLocation), repeats: false)
+                        
+                        
+                        let content = UNMutableNotificationContent()
+                        if let name = stadium.name{
+                            content.title = name
+                        }
+
+                        if let slogan = stadium.homeslogan, stadium.homeslogan != ""{
+                            content.body = slogan
+                        }else{
+                            
+                            content.body = String.localizedStringWithFormat(NSLocalizedString("notification.closeby", value:"You are close by a stadium",comment: "shown when the user is close to a stadium"))
+                        }
+                        content.sound = UNNotificationSound.default()
+                        var identifier = "defaultStadiumNotification"
+                        if let hometeam = stadium.hometeam{
+                            identifier = hometeam
+                        }
+                        
+                         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                        centre.add(request, withCompletionHandler: nil)
+                        
+                    }
+                
+            }
+        }
+    }
+    
     func askforLocation(){
-        locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
     }
     
     func locationDenied(){
@@ -114,7 +191,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         CounterLabel.isHidden = true
         degreesLabel.text = String.localizedStringWithFormat(NSLocalizedString("location.denied", value:"Please open Settings to allow location access",comment: "shown when location data is not shared"))
         allowLocation.setTitle(String.localizedStringWithFormat(NSLocalizedString("location.deniedbutton", value:"Please open allow location access",comment: "title when location data is not requested")), for: .normal)
-         allowLocation.isHidden = false
+        allowLocation.isHidden = false
         NSLog("User denied location")
     }
     
@@ -141,17 +218,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func changeStadium(){
         self.navigationController?.popViewController(animated: true)
     }
-    
-    func locationManagerShouldDisplayHeadingCalibration(_ manager: CLLocationManager) -> Bool {
-        return true
-    }
-    
-    func updateUI(){
+
+    func startUpdatingUI(){
         locationManager.requestLocation()
         
         //    locationManager.startUpdatingHeading()
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
+        updateUI()
+    }
+    
+    func updateUI(){
+
         
         
         
@@ -178,11 +256,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             //default
             break
         }
-
+        
         
         
         if userlocation != nil && targetlocation != nil{
-            if let distance = calculateDistance(user: userlocation!, target: targetlocation!){
+            
+            if let distance = stadion?.calculateDistance(user: userlocation!){
                 if distance > 1000{
                     let format = ".1"
                     cityLabel.text = "\(Double(distance/1000).format(f: format))km"
@@ -207,39 +286,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     }
                     distanceTextLabel.text = distanceText
                     
-                
-                
-                if distance < 200{
-                    stadion?.updateVisits()
-                    let colorheart = UIImage(named: "heart")?.withRenderingMode(.alwaysTemplate)
-                    arrowImage.tintColor = stadion?.arrowColor
-                    arrowImage.image = colorheart
-                    arrowImage.transform = CGAffineTransform(rotationAngle: 0)
-                    cityLabel.isHidden = true
                     
-                    if let slogan = stadion?.homeslogan, stadion?.homeslogan != ""{
-                        distanceTextLabel.text = slogan
+                    
+                    if distance < 200{
+                        stadion?.updateVisits()
+                        let colorheart = UIImage(named: "heart")?.withRenderingMode(.alwaysTemplate)
+                        arrowImage.tintColor = stadion?.arrowColor
+                        arrowImage.image = colorheart
+                        arrowImage.transform = CGAffineTransform(rotationAngle: 0)
+                        cityLabel.isHidden = true
+                        
+                        if let slogan = stadion?.homeslogan, stadion?.homeslogan != ""{
+                            distanceTextLabel.text = slogan
+                        }
+                        
+                        
+                    }else{
+                        let colorArrow = UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate)
+                        arrowImage.tintColor = stadion?.arrowColor
+                        arrowImage.image = colorArrow
+                        cityLabel.isHidden = false
+                        if let degrees = stadion?.calculateAngle(user: userlocation!){
+                            var stadiumheading =  degrees - heading + correction
+                            stadiumheading = round(stadiumheading)
+                            degreesLabel.text = "\(stadiumheading)°"
+                            degreesLabel.isHidden = true
+                            UIView.animate(withDuration: 0.3, animations: {
+                                let rot =  CGFloat((stadiumheading * .pi) / 180)
+                                self.arrowImage.transform = CGAffineTransform(rotationAngle: rot)
+                        })
+                        }
                     }
+                    arrowImage.isHidden = false
+                    distanceTextLabel.isHidden = false
                     
-                    
-                }else{
-                    let colorArrow = UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate)
-                    arrowImage.tintColor = stadion?.arrowColor
-                    arrowImage.image = colorArrow
-                    cityLabel.isHidden = false
-                    let degrees = calculateAngle(user: userlocation!, target: targetlocation!)
-                    var stadiumheading =  degrees - heading + correction
-                    stadiumheading = round(stadiumheading)
-                    degreesLabel.text = "\(stadiumheading)°"
-                    degreesLabel.isHidden = true
-                    UIView.animate(withDuration: 0.2, animations: {
-                        let rot =  CGFloat((stadiumheading * .pi) / 180)
-                        self.arrowImage.transform = CGAffineTransform(rotationAngle: rot)
-                    })
-                }
-                arrowImage.isHidden = false
-                distanceTextLabel.isHidden = false
-
                     
                 }else{
                     NSLog("error")
@@ -248,93 +328,115 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         if let visits = stadion?.getVisits(){
-          //  var lastVisit: String?
+            //  var lastVisit: String?
             var numberOfVisits: Int = 0
             for data in visits{
                 if data.key == "lastVisit", data.value is Date {
                     let formatter = DateFormatter()
                     formatter.dateStyle = DateFormatter.Style.short
-                  //  lastVisit = formatter.string(from: data.value as! Date)
+                    //  lastVisit = formatter.string(from: data.value as! Date)
                 }
                 if data.key == "numberOfVisists", data.value is Int {
                     numberOfVisits = data.value as! Int
                 }
             }
             
-           let lastVisitString = String.localizedStringWithFormat(NSLocalizedString("compassView.visitCounter", value:"You've visited %d times.",comment: "Text to display the message how often a stadium has been visited"), numberOfVisits)
+            let lastVisitString = String.localizedStringWithFormat(NSLocalizedString("compassView.visitCounter", value:"You've visited %d times.",comment: "Text to display the message how often a stadium has been visited"), numberOfVisits)
             if numberOfVisits > 0 {
                 CounterLabel.text = lastVisitString
                 CounterLabel.isHidden = false
             }
         }
     }
-    
-    func calculateAngle(user: CLLocationCoordinate2D, target: CLLocationCoordinate2D) -> Double{
-        
-        let userlat = Double(user.latitude)
-        let userlon = Double(user.longitude)
-        let targlat = Double(target.latitude)
-        let targlon = Double(target.longitude)
-        var degrees = Double()
-        
-        let dlat =   targlat - userlat
-        let dlon =   targlon - userlon
-        
-        if dlat == 0{
-            if dlon > 0 {
-                degrees = 90
-            }else{
-                degrees = 270
-            }
-        }else{
-            degrees = (atan(dlon/dlat))*180 / Double.pi
-        }
-        
-        if dlat < 0{
-            degrees = degrees + 180
-        }
-        
-        if degrees < 0{
-            degrees = degrees + 360
-        }
-        
-
-        
-        
-        return degrees
+ 
+    func locationManagerShouldDisplayHeadingCalibration(_ manager: CLLocationManager) -> Bool {
+        return true
     }
     
-    func calculateDistance(user: CLLocationCoordinate2D, target: CLLocationCoordinate2D) -> Double?{
-        
-        let r = 6371000.0
-        let φ1 = user.latitude.degreesToRadians
-        let φ2 = target.latitude.degreesToRadians
-        
-        let Δφ = (target.latitude - user.latitude).degreesToRadians
-        let Δλ = (target.longitude - user.longitude).degreesToRadians
-        
-        let a = sin(Δφ/2) * sin(Δφ/2) + cos(φ1) * cos(φ2) * sin(Δλ/2) * sin(Δλ/2)
-        let c = 2 * atan2(sqrt(a), sqrt(1-a))
-        
-        let d = r * c
-        return d
-    }
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // currently not used - this is for geofencing but as I have now used location based notification, I might not need it.
+    func startMonitoring(stadium: Stadium) {
+        if !CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+            NSLog("Geofencing is not supported on this device!")
+            return
+        }
+        if CLLocationManager.authorizationStatus() != .authorizedAlways {
+            NSLog("Location Monitoring not allowed")
+        }
+        if let stadiumLocation = stadium.location?.coordinate{
+            NSLog("Geofence for \(String(describing: stadium.hometeam)) created")
+            let region = self.region(withLocation: stadiumLocation)
+        
+            locationManager.startMonitoring(for: region)
+        }
+    }
+    
+    func stopMonitoring() {
+        for region in locationManager.monitoredRegions {
+            locationManager.stopMonitoring(for: region)
+        }
+    }
+    
+
+    func handleEvent(forRegion region: CLRegion!) {
+        print("Geofence triggered!")
+        let stadion = Stadium.init(stadionID: region.identifier)
+        if stadion.hometeam != nil {
+            triggerNotificationfor(stadium: stadion)
+        }
+    }
+    
+    func triggerNotificationfor(stadium: Stadium){
+        let centre = UNUserNotificationCenter.current()
+        centre.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != UNAuthorizationStatus.authorized {
+                print("Not Authorised")
+            } else {
+                print("Authorised")
+                
+                
+                
+
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                    
+                    let content = UNMutableNotificationContent()
+                    if let name = stadium.name{
+                        content.title = name
+                    }
+                    
+                    if let slogan = stadium.homeslogan, stadium.homeslogan != ""{
+                        content.body = slogan
+                    }else{
+                        
+                        content.body = String.localizedStringWithFormat(NSLocalizedString("notification.closeby", value:"You are close by a stadium",comment: "shown when the user is close to a stadium"))
+                    }
+                    content.sound = UNNotificationSound.default()
+                    var identifier = "defaultStadiumNotification"
+                    if let hometeam = stadium.hometeam{
+                        identifier = hometeam
+                    }
+                    centre.removeDeliveredNotifications(withIdentifiers: [identifier])
+                    let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                    centre.add(request, withCompletionHandler: nil)
+                    
+                }
+                
+            
+        }
+    }
+    
+}
+
+extension ViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        updateLocation()
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //        if let userlocation = locations.last?.coordinate,
-        //            let targetlocation = stadion?.location?.coordinate,
-        //                targetlocation != nil{
-        //            let degrees = calculateAngle(user: userlocation, target: targetlocation)
-        //
-        //        }
-        //
         updateUI()
     }
     
@@ -351,7 +453,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         NSLog("Did finish Updates with Error \(String(describing: error))")
     }
     
+    
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        print("Monitoring failed for region with identifier: \(region!.identifier)")
+    }
+    
+    
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            handleEvent(forRegion: region)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            handleEvent(forRegion: region)
+        }
+    }
+    
+    
 }
+
 
 
 extension FloatingPoint {
@@ -363,3 +486,5 @@ extension Double {
         return String(format: "%\(f)f", self)
     }
 }
+
+

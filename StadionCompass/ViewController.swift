@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         if let stadium = stadion{
             
             //should use only one of those two - currently testing which works better.
-          //  setlocationNotificationfor(stadium: stadium)
+          
             startMonitoring(stadium: stadium)
         }
   
@@ -136,46 +136,6 @@ class ViewController: UIViewController {
             startUpdatingUI()
         }else if CLLocationManager.authorizationStatus() == .denied{
             locationDenied()
-        }
-    }
-    
-    func setlocationNotificationfor(stadium: Stadium){
-        let centre = UNUserNotificationCenter.current()
-        centre.getNotificationSettings { (settings) in
-            if settings.authorizationStatus != UNAuthorizationStatus.authorized {
-                
-            } else {
-               
-                
-
-                    if let stadionLocation = stadium.location?.coordinate{
-                        
-                        let trigger = UNLocationNotificationTrigger(region: self.region(withLocation: stadionLocation), repeats: false)
-                        
-                        
-                        let content = UNMutableNotificationContent()
-                        if let name = stadium.name{
-                            content.title = name
-                        }
-
-                        if let slogan = stadium.homeslogan, stadium.homeslogan != ""{
-                            content.body = slogan
-                        }else{
-                            
-                            content.body = String.localizedStringWithFormat(NSLocalizedString("notification.closeby", value:"You are close by a stadium",comment: "shown when the user is close to a stadium"))
-                        }
-                        content.sound = UNNotificationSound.default()
-                        var identifier = "defaultStadiumNotification"
-                        if let hometeam = stadium.hometeam{
-                            identifier = hometeam
-                        }
-                        
-                         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-                        centre.add(request, withCompletionHandler: nil)
-                        
-                    }
-                
-            }
         }
     }
     

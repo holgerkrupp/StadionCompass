@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import UserNotifications
+import CoreMotion
 
 class ViewController: UIViewController {
     
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
     
     var stadion : Stadium?
     let locationManager = CLLocationManager.init()
-    
+    //let motionManager = CMDeviceMotion.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
         {
          
            // stadion = Stadium.init(stadionID: stadionID)
-            
+            NotificationCenter.default.addObserver(self, selector: #selector(appbecameActive), name: .UIApplicationDidBecomeActive, object: nil)
             nameLabel.text = stadion?.name
             cityLabel.text = stadion?.city
             homeLabel.text = stadion?.hometeam
@@ -79,6 +80,10 @@ class ViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    @objc func appbecameActive(){
+        updateLocation()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         UIView.setAnimationsEnabled(true)
         self.navigationItem.setHidesBackButton(true, animated: animated);
@@ -90,28 +95,7 @@ class ViewController: UIViewController {
         updateLocation()
     }
     
-    func startgeofencing(){
-        if let stadium = stadion{
-            
-            //should use only one of those two - currently testing which works better.
-          
-            startMonitoring(stadium: stadium)
-        }
-  
-    }
-    
-    func region(withLocation target:CLLocationCoordinate2D) -> CLCircularRegion {
-        var regionID = "hometeam"
-        
-        if let stadiumID = stadion?.hometeam{
-            regionID = stadiumID
-        }
-            let region = CLCircularRegion(center: target, radius: 200, identifier: regionID)
-            region.notifyOnEntry = true
-            region.notifyOnExit = false
-            return region
-    }
-    
+
     func updateLocation(){
         degreesLabel.text = "checking location"
         NSLog("update Location")
@@ -123,26 +107,24 @@ class ViewController: UIViewController {
             if CLLocationManager.authorizationStatus() == .authorizedAlways{
                 
                 let centre = UNUserNotificationCenter.current()
-                centre.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-                    self.startgeofencing()
-                    // Enable or disable features based on authorization
+                centre.requestAuthorization(options: [.alert]) { (granted, error) in
+                    
+                    self.stadion?.startMonitoring()
+                    
                 }
             }
             
         }else if CLLocationManager.authorizationStatus() == .notDetermined{
             degreesLabel.text = "please allow location"
 
-            askforLocation()
+            stadion?.askforLocation()
             startUpdatingUI()
         }else if CLLocationManager.authorizationStatus() == .denied{
             locationDenied()
         }
     }
     
-    func askforLocation(){
-        //locationManager.requestWhenInUseAuthorization()
-        locationManager.requestAlwaysAuthorization()
-    }
+
     
     func locationDenied(){
         degreesLabel.isHidden = false
@@ -196,10 +178,18 @@ class ViewController: UIViewController {
         let userlocation  = locationManager.location?.coordinate
         let targetlocation = stadion?.location?.coordinate
         var heading = 0.0
-        if let realheading = locationManager.heading?.trueHeading.magnitude{
+        if let realheading = locationManager.heading?.trueHeading{
             heading = realheading
         }
-        
+        /*
+        if #available(iOS 11.0, *) {
+            if let magneticHeading = motionManager.heading.{
+                heading = magneticHeading
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+        */
         
         // correction to be applied when userinterface is not in alignment with device orientation
         var correction = 0.0
@@ -316,23 +306,6 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // currently not used - this is for geofencing but as I have now used location based notification, I might not need it.
-    func startMonitoring(stadium: Stadium) {
-        if !CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
-            NSLog("Geofencing is not supported on this device!")
-            return
-        }
-        if CLLocationManager.authorizationStatus() != .authorizedAlways {
-            NSLog("Location Monitoring not allowed")
-        }
-        if let stadiumLocation = stadium.location?.coordinate{
-            NSLog("Geofence for \(String(describing: stadium.hometeam)) created")
-            let region = self.region(withLocation: stadiumLocation)
-        
-            locationManager.startMonitoring(for: region)
-        }
     }
     
     func stopMonitoring() {

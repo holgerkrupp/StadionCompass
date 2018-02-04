@@ -13,6 +13,7 @@ class StadiumSelectorCell: UITableViewCell {
     @IBOutlet weak var TeamNameLabel: UILabel!
     @IBOutlet weak var IconLabel: UILabel!
     @IBOutlet weak var StadiumNameLabel: UILabel!
+    @IBOutlet weak var homeStadionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

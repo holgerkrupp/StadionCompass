@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import UserNotifications
 
 class Stadium: NSObject {
     var location: CLLocation?
@@ -19,6 +20,8 @@ class Stadium: NSObject {
     var arrowColor = UIColor.white
     var bgColor = UIColor.black
     var textColor = UIColor.white
+    
+    let locationManager = CLLocationManager.init()
     
     override init() {
         
@@ -146,6 +149,91 @@ class Stadium: NSObject {
         }
         return visitData
     }
+    
+    
+    func region(withLocation target:CLLocationCoordinate2D) -> CLCircularRegion {
+        var regionID = "hometeam"
+        
+        if let stadiumID = self.hometeam{
+            regionID = stadiumID
+        }
+        let region = CLCircularRegion(center: target, radius: 200, identifier: regionID)
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
+        return region
+    }
+    
+    func startMonitoring() {
+        NSLog("monitored regions: \(locationManager.monitoredRegions.count)")
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            if let stadiumLocation = self.location?.coordinate{
+                NSLog("Geofence for \(String(describing: self.hometeam)) created")
+                let region = self.region(withLocation: stadiumLocation)
+                if !locationManager.monitoredRegions.contains(region){
+                    locationManager.startMonitoring(for: region)
+                }
+            }
+        }else if CLLocationManager.authorizationStatus() == .notDetermined{
+            askforLocation()
+        }
+    }
+    
+    /*
+    // Not used
+    func setlocationNotification(){
+      
+        let centre = UNUserNotificationCenter.current()
+        centre.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != UNAuthorizationStatus.authorized {
+                
+            } else {
+                
+                
+                
+                if let stadionLocation = self.location?.coordinate{
+                    
+                    let trigger = UNLocationNotificationTrigger(region: self.region(withLocation: stadionLocation), repeats: false)
+                    
+                    
+                    let content = UNMutableNotificationContent()
+                    if let name = self.name{
+                        content.title = name
+                    }
+                    
+                    if let slogan = self.homeslogan, self.homeslogan != ""{
+                        content.body = slogan
+                    }else{
+                        content.body = String.localizedStringWithFormat(NSLocalizedString("notification.closeby", value:"You are close by a stadium",comment: "shown when the user is close to a stadium"))
+                    }
+                    content.sound = UNNotificationSound.default()
+                    var identifier = "defaultStadiumNotification"
+                    if let hometeam = self.hometeam{
+                        identifier = hometeam
+                    }
+                    
+                    let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                    centre.add(request, withCompletionHandler: nil)
+                    
+                }
+                
+            }
+        }
+        
+        
+    }
+    */
+    
+    
+    
+    
+    
+    
+    func askforLocation(){
+        locationManager.requestAlwaysAuthorization()
+    }
+    
+    
+    
     
     func calculateDistance(user: CLLocationCoordinate2D) -> Double?{
         

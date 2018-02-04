@@ -41,15 +41,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFb-Nl-Ggl">
-                                            <rect key="frame" x="43.5" y="27.5" width="289.5" height="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFb-Nl-Ggl">
+                                            <rect key="frame" x="44" y="28" width="245" height="12"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TeamName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRe-za-HPe">
-                                            <rect key="frame" x="43" y="4" width="289.5" height="19.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TeamName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRe-za-HPe">
+                                            <rect key="frame" x="43" y="4" width="245" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q2-l2-7bw">
+                                            <rect key="frame" x="305.5" y="8" width="27.5" height="27.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="1Q2-l2-7bw" secondAttribute="height" multiplier="1:1" id="4cW-fW-isP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -57,21 +66,24 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="P5x-tL-0Ej" secondAttribute="bottom" constant="8" id="8Dw-Z2-2Ld"/>
                                         <constraint firstItem="OFb-Nl-Ggl" firstAttribute="top" secondItem="IRe-za-HPe" secondAttribute="bottom" constant="4" id="9op-1V-E82"/>
+                                        <constraint firstItem="1Q2-l2-7bw" firstAttribute="top" secondItem="P5x-tL-0Ej" secondAttribute="top" id="BAo-Rg-Zhc"/>
                                         <constraint firstItem="P5x-tL-0Ej" firstAttribute="leading" secondItem="SKQ-qF-F6y" secondAttribute="leading" constant="8" id="Cjn-tm-GHy"/>
-                                        <constraint firstAttribute="trailing" secondItem="OFb-Nl-Ggl" secondAttribute="trailing" constant="8" id="Emm-Xa-t1Y"/>
                                         <constraint firstAttribute="bottom" secondItem="OFb-Nl-Ggl" secondAttribute="bottom" constant="4" id="L7Z-yh-DAq"/>
                                         <constraint firstItem="OFb-Nl-Ggl" firstAttribute="width" secondItem="IRe-za-HPe" secondAttribute="width" id="L9e-1J-JI8"/>
-                                        <constraint firstAttribute="trailing" secondItem="IRe-za-HPe" secondAttribute="trailing" constant="8" id="Mg0-Kg-cI6"/>
                                         <constraint firstItem="P5x-tL-0Ej" firstAttribute="top" secondItem="SKQ-qF-F6y" secondAttribute="top" constant="8" id="OcG-PA-M6J"/>
                                         <constraint firstItem="IRe-za-HPe" firstAttribute="top" secondItem="SKQ-qF-F6y" secondAttribute="top" constant="4" id="TtJ-ey-Riy"/>
                                         <constraint firstItem="IRe-za-HPe" firstAttribute="leading" secondItem="P5x-tL-0Ej" secondAttribute="trailing" constant="8" id="X38-kP-4LU"/>
+                                        <constraint firstItem="1Q2-l2-7bw" firstAttribute="centerY" secondItem="P5x-tL-0Ej" secondAttribute="centerY" id="aGR-Mr-gKx"/>
+                                        <constraint firstAttribute="trailing" secondItem="1Q2-l2-7bw" secondAttribute="trailing" constant="8" id="f0Y-3O-LE7"/>
                                         <constraint firstItem="OFb-Nl-Ggl" firstAttribute="leading" secondItem="P5x-tL-0Ej" secondAttribute="trailing" constant="8" id="obl-H6-K8R"/>
+                                        <constraint firstItem="1Q2-l2-7bw" firstAttribute="bottom" secondItem="P5x-tL-0Ej" secondAttribute="bottom" id="yf3-yw-W7X"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="IconLabel" destination="P5x-tL-0Ej" id="ucv-AK-wZi"/>
                                     <outlet property="StadiumNameLabel" destination="OFb-Nl-Ggl" id="Ctu-5L-aLr"/>
                                     <outlet property="TeamNameLabel" destination="IRe-za-HPe" id="UlH-D2-QNj"/>
+                                    <outlet property="homeStadionLabel" destination="1Q2-l2-7bw" id="WWu-fE-Gqh"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showNavigator" id="BzU-n8-6NS"/>
                                 </connections>
                             </tableViewCell>

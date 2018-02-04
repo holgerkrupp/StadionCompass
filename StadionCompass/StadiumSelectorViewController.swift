@@ -52,17 +52,29 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
         }
         definesPresentationContext = true
     
+      
+         /*
+         //Would be so nice, but it's not working as geofencing is limited to about 20 Geofences
+        
+         DispatchQueue.global().async {
+            for team in self.allTeams{
+                team.setlocationNotification()
+            }
+        }*/
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         reloadheaders()
+        self.tableView.reloadData()
         
         
     }
     override func viewDidAppear(_ animated: Bool) {
         UIView.setAnimationsEnabled(true)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-     
+        
+
     }
     
     
@@ -142,7 +154,13 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
         
         cell.TeamNameLabel.text = Stadion.hometeam
         cell.StadiumNameLabel.text = Stadion.name
-      
+        
+        cell.homeStadionLabel.isHidden = true
+        if let homeID = getObjectForKeyFromPersistentStorrage("homestadium") as? String{
+            if homeID == Stadion.hometeam{
+                cell.homeStadionLabel.isHidden = false
+            }
+        }
 
         return cell
     }

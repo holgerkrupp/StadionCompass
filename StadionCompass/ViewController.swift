@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 import UserNotifications
-import CoreMotion
+import MapKit
 
 class ViewController: UIViewController {
     
@@ -212,13 +212,9 @@ class ViewController: UIViewController {
         if userlocation != nil && targetlocation != nil{
             
             if let distance = stadion?.calculateDistance(user: userlocation!){
-                if distance > 1000{
-                    let format = ".1"
-                    cityLabel.text = "\(Double(distance/1000).format(f: format))km"
-                }else{
-                    let format = ".0"
-                    cityLabel.text = "\(floor(distance).format(f: format))m"
-                }
+                
+                cityLabel.text = MKDistanceFormatter().string(fromDistance: distance)
+
                 
                 if let textDict = getDataFromPlist(plist: "distanceTexts", key: nil) as? NSDictionary
                 {
@@ -389,9 +385,19 @@ extension ViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         print("Monitoring failed for region with identifier: \(region!.identifier)")
+        if let oldestRegion = manager.monitoredRegions.first{
+            manager.stopMonitoring(for: oldestRegion)
+            if let newregion = region{
+                manager.startMonitoring(for: newregion)
+            }
+        }
+        
     }
     
-    
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+        NSLog("Location Monitoring started ----- for \(region.identifier)")
+        dump(manager.monitoredRegions)
+    }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         if region is CLCircularRegion {

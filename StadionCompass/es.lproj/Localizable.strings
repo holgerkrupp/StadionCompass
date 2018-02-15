@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  StadionCompass
+
+  Created by Holger Krupp on 21.01.18.
+  Copyright © 2018 Holger Krupp. All rights reserved.
+*/
+
+//StadiumSelectorViewController - All Strings used in the view where the user selects his stadium
+
+"stadiumtable.search"   =  "Búsqueda"; // shown in searchbar
+"stadiumtable.title"    = "Elige tu equipo"; // "shown in TableView"
+
+
+//ViewController - All Strings used in the view where the user selects his stadium
+"location.denied"   = "Por favor, permita el acceso a su ubicación en la configuración"; // "shown when location data is not shared"
+"location.deniedbutton"   = "Abrir ajustes"; // "title when location data is not requested"
+"compassView.visitCounter"  = "Has estado aquí %d veces."; // "Text to display the message how often a stadium has been visited - with %d beeing the number of visits"
+
+"notification.closeby" = "Estás cerca de un estadio";

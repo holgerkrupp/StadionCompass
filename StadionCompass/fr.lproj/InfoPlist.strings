@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  StadionCompass
+
+  Created by Holger Krupp on 21.01.18.
+  Copyright © 2018 Holger Krupp. All rights reserved.
+*/
+"CFBundleDisplayName" = "Stade";
+"CFBundleName" = "Stade";
+"NSLocationUsageDescription" = "Pour voir la direction du stade";
+"NSLocationWhenInUseUsageDescription" = "Pour voir la direction du stade";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "D'être informé à proximité d'un stade.";

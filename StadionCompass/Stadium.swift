@@ -164,10 +164,8 @@ class Stadium: NSObject {
     }
     
     func startMonitoring() {
-        NSLog("monitored regions: \(locationManager.monitoredRegions.count)")
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
             if let stadiumLocation = self.location?.coordinate{
-                NSLog("Geofence for \(String(describing: self.hometeam)) created")
                 let region = self.region(withLocation: stadiumLocation)
                 if !locationManager.monitoredRegions.contains(region){
                     locationManager.startMonitoring(for: region)
@@ -177,6 +175,8 @@ class Stadium: NSObject {
             askforLocation()
         }
     }
+    
+    
     
     /*
     // Not used
@@ -235,7 +235,7 @@ class Stadium: NSObject {
     
     
     
-    func calculateDistance(user: CLLocationCoordinate2D) -> Double?{
+    func calculateDistance(user: CLLocationCoordinate2D) -> CLLocationDistance?{
         
             if let target = self.location?.coordinate{
             

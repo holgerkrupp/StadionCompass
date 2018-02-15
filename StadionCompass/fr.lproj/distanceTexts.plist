@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>200</key>
+    <string>Bienvenue à la maison</string>
+    <key>5000</key>
+    <string>Approchez-vous</string>
+    <key>10000</key>
+    <string>Pouvez-vous sentir votre maison?</string>
+    <key>100000</key>
+    <string>Bientôt vous serez de retour à la maison.</string>
+    <key>500000</key>
+    <string>Ne vous éloignez pas si longtemps.</string>
+    <key>1000000</key>
+    <string>Reviens à la maison bien tôt.</string>
+    <key>2000000</key>
+    <string>Tu as le mal du pays?</string>
+</dict>
+</plist>

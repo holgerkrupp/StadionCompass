@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Leagues" representedClassName="Leagues" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="id" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stadiums" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Stadiums" representedClassName="Stadiums" syncable="YES" codeGenerationType="class">
+        <attribute name="arrowColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bgColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="homeslogan" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hometeam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textColor" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="league" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Leagues" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="hometeam"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Stadiums" positionX="-53.85546875" positionY="-16.78515625" width="128" height="193"/>
+        <element name="Leagues" positionX="248.32421875" positionY="15.3671875" width="128" height="73"/>
+    </elements>
+</model>

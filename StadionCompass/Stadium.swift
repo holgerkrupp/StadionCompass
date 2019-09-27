@@ -110,15 +110,22 @@ class Stadium: NSObject {
                 }
 
                 let today = Date()
-                if oneDayafterLastVisit! < today {
-                    numberOfVisists = oldNumberOfVisits + 1
-                    NSLog("new visits: \(numberOfVisists)")
-                    lastVisit = today
-
+                if let oneDayafter = oneDayafterLastVisit{
+                    if oneDayafter < today {
+                        numberOfVisists = oldNumberOfVisits + 1
+                        lastVisit = today
+                        
+                    }else{
+                        numberOfVisists = oldNumberOfVisits
+                        
+                    }
                 }else{
+                    //ERROR Something wrong with last visit data - the date of last visit is missing
                     numberOfVisists = oldNumberOfVisits
-                    
+                    lastVisit = today
                 }
+                
+                
             
                 
             }
@@ -171,61 +178,19 @@ class Stadium: NSObject {
                     locationManager.startMonitoring(for: region)
                 }
             }
+        
+            //significant location change:
+        
+            locationManager.delegate = self
+        locationManager.startMonitoringSignificantLocationChanges()
+        
+        
+        
+        
         }else if CLLocationManager.authorizationStatus() == .notDetermined{
             askforLocation()
         }
     }
-    
-    
-    
-    /*
-    // Not used
-    func setlocationNotification(){
-      
-        let centre = UNUserNotificationCenter.current()
-        centre.getNotificationSettings { (settings) in
-            if settings.authorizationStatus != UNAuthorizationStatus.authorized {
-                
-            } else {
-                
-                
-                
-                if let stadionLocation = self.location?.coordinate{
-                    
-                    let trigger = UNLocationNotificationTrigger(region: self.region(withLocation: stadionLocation), repeats: false)
-                    
-                    
-                    let content = UNMutableNotificationContent()
-                    if let name = self.name{
-                        content.title = name
-                    }
-                    
-                    if let slogan = self.homeslogan, self.homeslogan != ""{
-                        content.body = slogan
-                    }else{
-                        content.body = String.localizedStringWithFormat(NSLocalizedString("notification.closeby", value:"You are close by a stadium",comment: "shown when the user is close to a stadium"))
-                    }
-                    content.sound = UNNotificationSound.default()
-                    var identifier = "defaultStadiumNotification"
-                    if let hometeam = self.hometeam{
-                        identifier = hometeam
-                    }
-                    
-                    let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-                    centre.add(request, withCompletionHandler: nil)
-                    
-                }
-                
-            }
-        }
-        
-        
-    }
-    */
-    
-    
-    
-    
     
     
     func askforLocation(){
@@ -293,5 +258,37 @@ class Stadium: NSObject {
             return nil
         }
     
+    }
+}
+
+extension Stadium: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
+        let lastLocation = locations.last!
+        
+        NSLog("location did change")
+        
+        let center = UNUserNotificationCenter.current
+        
+        
+        let identifier = "defaultStadium"
+        
+        let content = UNMutableNotificationContent()
+        if let name = self.name{
+            content.title = name
+        }
+        
+        if let slogan = self.homeslogan, self.homeslogan != ""{
+            content.body = slogan
+        }else{
+            content.body = String.localizedStringWithFormat(NSLocalizedString("notification.closeby", value:"You are close by a stadium",comment: "shown when the user is close to a stadium"))
+        }
+        content.sound = UNNotificationSound.default
+        
+        
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: nil)
+        center().add(request, withCompletionHandler: nil)
+        
+        
     }
 }

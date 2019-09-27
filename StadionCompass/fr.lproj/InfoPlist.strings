@@ -10,3 +10,4 @@
 "NSLocationUsageDescription" = "Pour voir la direction du stade";
 "NSLocationWhenInUseUsageDescription" = "Pour voir la direction du stade";
 "NSLocationAlwaysAndWhenInUseUsageDescription" = "D'être informé à proximité d'un stade.";
+"NSLocationAlwaysUsageDescription" = "D'être informé à proximité d'un stade.";

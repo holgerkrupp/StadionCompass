@@ -2,18 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>200</key>
-    <string>Bienvenido a casa</string>
-    <key>5000</key>
-    <string>Acércate</string>
-    <key>10000</key>
-    <string>¿Puedes sentir tu casa?</string>
-    <key>100000</key>
-    <string>Pronto estarás de vuelta en casa.</string>
-    <key>500000</key>
-    <string>No te quedes lejos por tanto tiempo.</string>
-    <key>1000000</key>
-    <string>Vuelve a casa pronto.</string><key>2000000</key>
-    <string>Nostalgia?</string>
+	<key>200</key>
+	<string>Bienvenido a casa</string>
+	<key>5000</key>
+	<string>Acércate</string>
+	<key>10000</key>
+	<string>¿Puedes sentir tu casa?</string>
+	<key>100000</key>
+	<string>Pronto estarás de vuelta en casa.</string>
+	<key>500000</key>
+	<string>No te quedes lejos por tanto tiempo.</string>
+	<key>1000000</key>
+	<string>Vuelve a casa pronto.</string>
+	<key>2000000</key>
+	<string>Nostalgia?</string>
 </dict>
 </plist>

@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         {
          
            // stadion = Stadium.init(stadionID: stadionID)
-            NotificationCenter.default.addObserver(self, selector: #selector(appbecameActive), name: .UIApplicationDidBecomeActive, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(appbecameActive), name: UIApplication.didBecomeActiveNotification, object: nil)
             nameLabel.text = stadion?.name
             cityLabel.text = stadion?.city
             homeLabel.text = stadion?.hometeam
@@ -139,7 +139,7 @@ class ViewController: UIViewController {
     
     func goToSettings(){
         guard let SettingsURL = URL(string:
-            UIApplicationOpenSettingsURLString) else {
+            UIApplication.openSettingsURLString) else {
                 return
         }
         
@@ -265,7 +265,7 @@ class ViewController: UIViewController {
                     }
                     arrowImage.isHidden = false
                     distanceTextLabel.isHidden = false
-                    
+                    allowLocation.isHidden = true
                     
                 }else{
                     NSLog("error")
@@ -312,11 +312,18 @@ class ViewController: UIViewController {
     
 
     func handleEvent(forRegion region: CLRegion!) {
-        print("Geofence triggered!")
+        
         let stadion = Stadium.init(stadionID: region.identifier)
-        if stadion.hometeam != nil {
-            triggerNotificationfor(stadium: stadion)
+        var TimeSincelastNotification:DateInterval? = nil
+        if let lastnotificationDate = getObjectForKeyFromPersistentStorrage("lastnotification") as? Date{
+            TimeSincelastNotification = DateInterval(start: lastnotificationDate, end: Date())
         }
+        if TimeSincelastNotification == nil || (TimeSincelastNotification?.duration)! > 60*60*24{
+            if stadion.hometeam != nil{
+                triggerNotificationfor(stadium: stadion)
+            }
+        }
+        
     }
     
     func triggerNotificationfor(stadium: Stadium){
@@ -343,7 +350,7 @@ class ViewController: UIViewController {
                         
                         content.body = String.localizedStringWithFormat(NSLocalizedString("notification.closeby", value:"You are close by a stadium",comment: "shown when the user is close to a stadium"))
                     }
-                    content.sound = UNNotificationSound.default()
+                    content.sound = UNNotificationSound.default
                     var identifier = "defaultStadiumNotification"
                     if let hometeam = stadium.hometeam{
                         identifier = hometeam
@@ -351,7 +358,8 @@ class ViewController: UIViewController {
                     centre.removeDeliveredNotifications(withIdentifiers: [identifier])
                     let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
                     centre.add(request, withCompletionHandler: nil)
-                    
+                    let lastNotificationDate = Date()
+                    setObjectForKeyToPersistentStorrage("lastnotification", object: lastNotificationDate)
                 }
                 
             

@@ -10,6 +10,10 @@
 		481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */; };
 		481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */; };
 		484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */; };
+		48500A03222F05BD007E1AAF /* StadiumData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48500A01222F05BD007E1AAF /* StadiumData.xcdatamodeld */; };
+		48500A06222F0BA5007E1AAF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48500A05222F0BA5007E1AAF /* CloudKit.framework */; };
+		48500A292233030A007E1AAF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48500A282233030A007E1AAF /* CoreDataHelper.swift */; };
+		48500A2B22342CA2007E1AAF /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48500A2A22342CA2007E1AAF /* CloudKitHelper.swift */; };
 		4859594120153756003FC320 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859594320153756003FC320 /* Localizable.strings */; };
 		4859595520153B67003FC320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4859595320153B67003FC320 /* Main.storyboard */; };
 		4859595820153BDE003FC320 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859595A20153BDE003FC320 /* InfoPlist.strings */; };
@@ -39,7 +43,12 @@
 /* Begin PBXFileReference section */
 		481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmykUIColor.swift; sourceTree = "<group>"; };
 		481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorViewController.swift; sourceTree = "<group>"; };
+		482CB94C219A211F0056FF73 /* StadionCompass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StadionCompass.entitlements; sourceTree = "<group>"; };
 		484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorCell.swift; sourceTree = "<group>"; };
+		48500A02222F05BD007E1AAF /* StadiumData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StadiumData.xcdatamodel; sourceTree = "<group>"; };
+		48500A05222F0BA5007E1AAF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		48500A282233030A007E1AAF /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		48500A2A22342CA2007E1AAF /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		4859595620153B9B003FC320 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4859595B20153D00003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4859595C20153D00003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48500A06222F0BA5007E1AAF /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +95,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48500A04222F0BA5007E1AAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48500A05222F0BA5007E1AAF /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		489B744D1FE99BBE0020B4CB = {
 			isa = PBXGroup;
 			children = (
 				489B74581FE99BBE0020B4CB /* StadionCompass */,
 				48FD29A02027857800724D0C /* plist2csv */,
 				489B74571FE99BBE0020B4CB /* Products */,
+				48500A04222F0BA5007E1AAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,10 +125,14 @@
 		489B74581FE99BBE0020B4CB /* StadionCompass */ = {
 			isa = PBXGroup;
 			children = (
+				482CB94C219A211F0056FF73 /* StadionCompass.entitlements */,
 				489B74591FE99BBE0020B4CB /* AppDelegate.swift */,
 				489B746F1FE99FF70020B4CB /* supportfunctions.swift */,
 				489B74711FE9A7650020B4CB /* Stadium.swift */,
+				48500A01222F05BD007E1AAF /* StadiumData.xcdatamodeld */,
+				48500A2A22342CA2007E1AAF /* CloudKitHelper.swift */,
 				481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */,
+				48500A282233030A007E1AAF /* CoreDataHelper.swift */,
 				484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */,
 				489B745B1FE99BBE0020B4CB /* ViewController.swift */,
 				481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */,
@@ -179,12 +202,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Holger Krupp";
 				TargetAttributes = {
 					489B74551FE99BBE0020B4CB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					48FD299E2027857800724D0C = {
 						CreatedOnToolsVersion = 9.2;
@@ -244,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -254,11 +286,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */,
+				48500A03222F05BD007E1AAF /* StadiumData.xcdatamodeld in Sources */,
 				489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */,
 				489B745A1FE99BBE0020B4CB /* AppDelegate.swift in Sources */,
 				489B74721FE9A7650020B4CB /* Stadium.swift in Sources */,
 				481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */,
+				48500A292233030A007E1AAF /* CoreDataHelper.swift in Sources */,
 				484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */,
+				48500A2B22342CA2007E1AAF /* CloudKitHelper.swift in Sources */,
 				48FD29A72027870900724D0C /* supportfunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +376,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -348,6 +384,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -399,6 +436,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -406,6 +444,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -439,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				INFOPLIST_FILE = StadionCompass/Info.plist;
@@ -446,7 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -455,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				INFOPLIST_FILE = StadionCompass/Info.plist;
@@ -462,7 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -524,6 +565,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		48500A01222F05BD007E1AAF /* StadiumData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				48500A02222F05BD007E1AAF /* StadiumData.xcdatamodel */,
+			);
+			currentVersion = 48500A02222F05BD007E1AAF /* StadiumData.xcdatamodel */;
+			path = StadiumData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 489B744E1FE99BBE0020B4CB /* Project object */;
 }

@@ -24,6 +24,15 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      // let CDHelper = CoreDataHelper()
+      //  CDHelper.deleteDatabase()
+        let CDHelper = CoreDataHelper()
+        CDHelper.readCompetitions()
+        
+        let CLHelper = CloudKitHelper()
+    //    CLHelper.subscribeChanges()
+        CLHelper.setObservers()
+        
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
        allTeams = loadTeams()
         if (getObjectForKeyFromPersistentStorrage("homestadium") as? String) != nil{
@@ -67,13 +76,13 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     override func viewWillAppear(_ animated: Bool) {
         reloadheaders()
         self.tableView.reloadData()
-        
+
         
     }
     override func viewDidAppear(_ animated: Bool) {
         UIView.setAnimationsEnabled(true)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        
+
 
     }
     
@@ -198,9 +207,18 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     }
     
     func loadTeams() -> [Stadium]{
+        NSLog("loading teams")
         var allTeams = [Stadium]()
         if let allcompetitions = getDataFromPlist(plist: "StadionData", key: nil) as? Dictionary<String, Any>{
             for competition in allcompetitions{
+                NSLog("Competition found locally: \(competition.key)")
+                if let comp = competition.key as? String{
+                    let CDHelper = CoreDataHelper()
+                    CDHelper.saveCompetition(competition: comp)
+                    
+                }
+
+                
                 if let stad = competition.value as? Dictionary<String, Any>{
                     for compstadium in stad{
                         if let _ = compstadium.value as? NSDictionary{

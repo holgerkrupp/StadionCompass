@@ -17,14 +17,16 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1920.0</string>
 	<key>CFBundleVersion</key>
-	<string>442</string>
+	<string>527</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To show the correct direction and notify you near to your stadium</string>
+	<key>NSLocationAlwaysUsageDescription</key>
 	<string>To show the correct direction and notify you near to your stadium</string>
 	<key>NSLocationUsageDescription</key>
 	<string>To show the correct direction</string>

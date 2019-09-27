@@ -9,4 +9,5 @@
 "CFBundleName" = "Estadio";
 "NSLocationUsageDescription" = "Para ver la dirección del estadio.";
 "NSLocationWhenInUseUsageDescription" = "Para ver la dirección del estadio.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Estar informado en las cercanías de un estadio.";
 "NSLocationAlwaysUsageDescription" = "Estar informado en las cercanías de un estadio.";

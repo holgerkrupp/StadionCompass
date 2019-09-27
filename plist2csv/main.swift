@@ -26,7 +26,6 @@ func getDataFromPlist(plist:String, key:String?) -> Any{
 
 
 if let allcompetitions = getDataFromPlist(plist: "StadionData", key: nil) as? Dictionary<String, Any>{
-    NSLog("Test")
     for competition in allcompetitions{
         if let stad = competition.value as? Dictionary<String, Any>{
             for compstadium in stad{

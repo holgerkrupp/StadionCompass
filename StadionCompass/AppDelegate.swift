@@ -9,6 +9,10 @@
 import UIKit
 import UserNotifications
 import CoreData
+import WatchConnectivity
+import GoogleMobileAds
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UNUserNotificationCenter.current().delegate = self
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        if !SessionHandler.shared.isSuported() {
+            print("WCSession not supported (f.e. on iPad).")
+        }
         // Override point for customization after application launch.
         return true
     }
 
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

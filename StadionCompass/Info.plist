@@ -17,9 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1920.0</string>
+	<string>1.1920.1</string>
 	<key>CFBundleVersion</key>
-	<string>527</string>
+	<string>703</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-5806009591474824~2758932653</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>

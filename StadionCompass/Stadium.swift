@@ -171,6 +171,7 @@ class Stadium: NSObject {
     }
     
     func startMonitoring() {
+        #if os(iOS)
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
             if let stadiumLocation = self.location?.coordinate{
                 let region = self.region(withLocation: stadiumLocation)
@@ -190,6 +191,7 @@ class Stadium: NSObject {
         }else if CLLocationManager.authorizationStatus() == .notDetermined{
             askforLocation()
         }
+        #endif
     }
     
     
@@ -263,6 +265,9 @@ class Stadium: NSObject {
 
 extension Stadium: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
+        
+        
+        
         let lastLocation = locations.last!
         
         NSLog("location did change")

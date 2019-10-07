@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import WatchConnectivity
+import GoogleMobileAds
 
 class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerDelegate {
 
@@ -20,10 +22,12 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     
     let searchController = UISearchController(searchResultsController: nil)
     
+    var session: WCSession?
     
-    
+    @IBOutlet weak var bannerView: GADBannerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        startSession()
       // let CDHelper = CoreDataHelper()
       //  CDHelper.deleteDatabase()
         let CDHelper = CoreDataHelper()
@@ -35,9 +39,11 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
        allTeams = loadTeams()
-        if (getObjectForKeyFromPersistentStorrage("homestadium") as? String) != nil{
+        if let homeStadium = getObjectForKeyFromPersistentStorrage("homestadium") as? String{
             UIView.setAnimationsEnabled(false)
+            saveToWatch(homestadium: homeStadium)
             performSegue(withIdentifier: "showNavigator", sender: self)
+            
         }else{
             
             UIView.setAnimationsEnabled(true)
@@ -76,6 +82,11 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     override func viewWillAppear(_ animated: Bool) {
         reloadheaders()
         self.tableView.reloadData()
+        if !proPurchased(){
+            loadBanner()
+        }else{
+            bannerView.removeFromSuperview()
+        }
 
         
     }
@@ -86,7 +97,13 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
 
     }
     
-    
+    func loadBanner(){
+        let GoogleAdUnitIDBanner = "ca-app-pub-5806009591474824/6172112796"
+
+        bannerView.adUnitID = GoogleAdUnitIDBanner
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -183,12 +200,13 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
         }else{
             let stadium = (leagues![indexPath.section].value as! Dictionary<String, Any>).sorted(by: { $0.key < $1.key }).sorted(by: {$0.key < $1.key})[indexPath.row]
             Stadion = Stadium.init(stadionID: stadium.key)
+            
         }
 
-        if Stadion.hometeam != nil{
+        if let hometeam = Stadion.hometeam{
             UIView.setAnimationsEnabled(true)
-            
-            setObjectForKeyToPersistentStorrage("homestadium", object: Stadion.hometeam!)
+            saveToWatch(homestadium: hometeam)
+            setObjectForKeyToPersistentStorrage("homestadium", object: hometeam)
         }
        
        // self.navigationController?.performSegue(withIdentifier: "showNavigator", sender: self)
@@ -212,11 +230,11 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
         if let allcompetitions = getDataFromPlist(plist: "StadionData", key: nil) as? Dictionary<String, Any>{
             for competition in allcompetitions{
                 NSLog("Competition found locally: \(competition.key)")
-                if let comp = competition.key as? String{
+                
                     let CDHelper = CoreDataHelper()
-                    CDHelper.saveCompetition(competition: comp)
+                    CDHelper.saveCompetition(competition: competition.key)
                     
-                }
+                
 
                 
                 if let stad = competition.value as? Dictionary<String, Any>{
@@ -256,5 +274,56 @@ extension StadiumSelectorViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+
+extension StadiumSelectorViewController: WCSessionDelegate{
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { }
+    func sessionDidBecomeInactive(_ session: WCSession) { }
+    func sessionDidDeactivate(_ session: WCSession) { }
+    
+    func startSession(){
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        
+        if let message = message as? [String : String] {
+            
+            if let homestadium = message["homestadium"]{
+               setObjectForKeyToPersistentStorrage("homestadium", object: homestadium)
+                // WKInterfaceDevice.current().play(.notification)
+            }else{
+                NSLog("homestadium not set")
+                dump(message)
+            }
+        }
+    }
+    
+    
+    func saveToWatch(homestadium : String){
+         if let validSession = session {
+               let iPhoneAppContext = ["homestadium": homestadium]
+        
+               do {
+                   try validSession.updateApplicationContext(iPhoneAppContext)
+                    NSLog("Saved To watch:")
+                dump(iPhoneAppContext)
+               } catch {
+                   print("Something went wrong")
+               }
+           }
+        
+        session?.sendMessage(["homestadium" : homestadium], replyHandler: nil, errorHandler: { (error) in
+                              print("Error sending message: \(error)")
+
+        })
+        
+ 
     }
 }

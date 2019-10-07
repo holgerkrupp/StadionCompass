@@ -47,3 +47,35 @@ func removePersistentStorrage(){
     let appdomain = Bundle.main.bundleIdentifier
     UserDefaults.standard.removePersistentDomain(forName: appdomain!)
 }
+
+func proPurchased() -> Bool{
+    if let proPurchased = getObjectForKeyFromPersistentStorrage("de.holgerkrupp.PhotoSort.ProFeatures"), proPurchased as! Bool == true{
+        return true
+    }else{
+        return false
+    }
+}
+
+func validateReceipt(){
+    if let receiptURL = Bundle.main.appStoreReceiptURL{
+        do{
+            let receipt = try Data(contentsOf: receiptURL)
+            NSLog("App Store Receipt")
+            dump(receipt)
+        }catch{
+            NSLog("App Store Receipt Error \(error.localizedDescription)")
+        }
+    }else{
+        NSLog("No App Store Receipt available")
+    }
+}
+
+extension FloatingPoint {
+    var degreesToRadians: Self { return self * .pi / 180 }
+    var radiansToDegrees: Self { return self * 180 / .pi }
+}
+extension Double {
+    func format(f: String) -> String {
+        return String(format: "%\(f)f", self)
+    }
+}

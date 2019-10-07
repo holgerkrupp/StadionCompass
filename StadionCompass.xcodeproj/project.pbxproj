@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480DB3F8233DC6470015D756 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480DB3F6233DC6470015D756 /* Interface.storyboard */; };
+		480DB3FA233DC64A0015D756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 480DB3F9233DC64A0015D756 /* Assets.xcassets */; };
+		480DB401233DC64A0015D756 /* StadionCompassWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 480DB400233DC64A0015D756 /* StadionCompassWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		480DB406233DC64A0015D756 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB405233DC64A0015D756 /* InterfaceController.swift */; };
+		480DB408233DC64A0015D756 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB407233DC64A0015D756 /* ExtensionDelegate.swift */; };
+		480DB40A233DC64A0015D756 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB409233DC64A0015D756 /* NotificationController.swift */; };
+		480DB40C233DC64A0015D756 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB40B233DC64A0015D756 /* ComplicationController.swift */; };
+		480DB40E233DC64B0015D756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 480DB40D233DC64B0015D756 /* Assets.xcassets */; };
+		480DB413233DC64B0015D756 /* StadionCompassWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 480DB3F4233DC6470015D756 /* StadionCompassWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		480DB41D233E2D1A0015D756 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB41C233E2D1A0015D756 /* SessionHandler.swift */; };
+		480DB420233E318E0015D756 /* StadionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 489B746D1FE99E510020B4CB /* StadionData.plist */; };
+		480DB421233E32170015D756 /* Stadium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B74711FE9A7650020B4CB /* Stadium.swift */; };
+		480DB422233E32E60015D756 /* supportfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B746F1FE99FF70020B4CB /* supportfunctions.swift */; };
+		480DB423233E335E0015D756 /* cmykUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */; };
+		480DB424233E34240015D756 /* StadionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 489B746D1FE99E510020B4CB /* StadionData.plist */; };
+		480DB42A233EFFB90015D756 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB429233EFFB90015D756 /* GoogleAppMeasurement.framework */; };
+		480DB42C233EFFC60015D756 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB42B233EFFC60015D756 /* nanopb.framework */; };
+		480DB42E233EFFD20015D756 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB42D233EFFD20015D756 /* GoogleMobileAds.framework */; };
+		480DB430233EFFDC0015D756 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB42F233EFFDC0015D756 /* GoogleUtilities.framework */; };
+		480DB432233F0BD90015D756 /* StadionSelecterInerfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB431233F0BD90015D756 /* StadionSelecterInerfaceController.swift */; };
+		480DB437233F13020015D756 /* StadionRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB436233F13020015D756 /* StadionRowController.swift */; };
 		481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */; };
 		481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */; };
 		484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */; };
@@ -21,14 +42,52 @@
 		489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B745B1FE99BBE0020B4CB /* ViewController.swift */; };
 		489B74611FE99BBE0020B4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489B74601FE99BBE0020B4CB /* Assets.xcassets */; };
 		489B74641FE99BBE0020B4CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489B74621FE99BBE0020B4CB /* LaunchScreen.storyboard */; };
-		489B746E1FE99E510020B4CB /* StadionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 489B746D1FE99E510020B4CB /* StadionData.plist */; };
 		489B74721FE9A7650020B4CB /* Stadium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B74711FE9A7650020B4CB /* Stadium.swift */; };
 		48FAAB5E2011365F006C8D61 /* distanceTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48FAAB602011365F006C8D61 /* distanceTexts.plist */; };
 		48FD29A22027857800724D0C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FD29A12027857800724D0C /* main.swift */; };
 		48FD29A72027870900724D0C /* supportfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B746F1FE99FF70020B4CB /* supportfunctions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		480DB402233DC64A0015D756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 489B744E1FE99BBE0020B4CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 480DB3FF233DC64A0015D756;
+			remoteInfo = "StadionCompassWatch Extension";
+		};
+		480DB411233DC64B0015D756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 489B744E1FE99BBE0020B4CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 480DB3F3233DC6470015D756;
+			remoteInfo = StadionCompassWatch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		480DB417233DC64B0015D756 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				480DB401233DC64A0015D756 /* StadionCompassWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480DB41B233DC64B0015D756 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				480DB413233DC64B0015D756 /* StadionCompassWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		48FD299D2027857800724D0C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +100,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		480DB3F4233DC6470015D756 /* StadionCompassWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StadionCompassWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		480DB3F7233DC6470015D756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		480DB3F9233DC64A0015D756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		480DB3FB233DC64A0015D756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480DB400233DC64A0015D756 /* StadionCompassWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "StadionCompassWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		480DB405233DC64A0015D756 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		480DB407233DC64A0015D756 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		480DB409233DC64A0015D756 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		480DB40B233DC64A0015D756 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		480DB40D233DC64B0015D756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		480DB40F233DC64B0015D756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480DB410233DC64B0015D756 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		480DB41C233E2D1A0015D756 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
+		480DB429233EFFB90015D756 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		480DB42B233EFFC60015D756 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		480DB42D233EFFD20015D756 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		480DB42F233EFFDC0015D756 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		480DB431233F0BD90015D756 /* StadionSelecterInerfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadionSelecterInerfaceController.swift; sourceTree = "<group>"; };
+		480DB436233F13020015D756 /* StadionRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadionRowController.swift; sourceTree = "<group>"; };
 		481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmykUIColor.swift; sourceTree = "<group>"; };
 		481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorViewController.swift; sourceTree = "<group>"; };
 		482CB94C219A211F0056FF73 /* StadionCompass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StadionCompass.entitlements; sourceTree = "<group>"; };
@@ -77,10 +155,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		480DB3FD233DC64A0015D756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		489B74531FE99BBE0020B4CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480DB42A233EFFB90015D756 /* GoogleAppMeasurement.framework in Frameworks */,
+				480DB42C233EFFC60015D756 /* nanopb.framework in Frameworks */,
+				480DB42E233EFFD20015D756 /* GoogleMobileAds.framework in Frameworks */,
+				480DB430233EFFDC0015D756 /* GoogleUtilities.framework in Frameworks */,
 				48500A06222F0BA5007E1AAF /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,9 +184,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		480DB3F5233DC6470015D756 /* StadionCompassWatch */ = {
+			isa = PBXGroup;
+			children = (
+				480DB3F6233DC6470015D756 /* Interface.storyboard */,
+				480DB3F9233DC64A0015D756 /* Assets.xcassets */,
+				480DB3FB233DC64A0015D756 /* Info.plist */,
+			);
+			path = StadionCompassWatch;
+			sourceTree = "<group>";
+		};
+		480DB404233DC64A0015D756 /* StadionCompassWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				480DB405233DC64A0015D756 /* InterfaceController.swift */,
+				480DB431233F0BD90015D756 /* StadionSelecterInerfaceController.swift */,
+				480DB436233F13020015D756 /* StadionRowController.swift */,
+				480DB407233DC64A0015D756 /* ExtensionDelegate.swift */,
+				480DB409233DC64A0015D756 /* NotificationController.swift */,
+				480DB40B233DC64A0015D756 /* ComplicationController.swift */,
+				480DB40D233DC64B0015D756 /* Assets.xcassets */,
+				480DB40F233DC64B0015D756 /* Info.plist */,
+				480DB410233DC64B0015D756 /* PushNotificationPayload.apns */,
+			);
+			path = "StadionCompassWatch Extension";
+			sourceTree = "<group>";
+		};
 		48500A04222F0BA5007E1AAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				480DB42F233EFFDC0015D756 /* GoogleUtilities.framework */,
+				480DB42D233EFFD20015D756 /* GoogleMobileAds.framework */,
+				480DB42B233EFFC60015D756 /* nanopb.framework */,
+				480DB429233EFFB90015D756 /* GoogleAppMeasurement.framework */,
 				48500A05222F0BA5007E1AAF /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -108,6 +227,8 @@
 			children = (
 				489B74581FE99BBE0020B4CB /* StadionCompass */,
 				48FD29A02027857800724D0C /* plist2csv */,
+				480DB3F5233DC6470015D756 /* StadionCompassWatch */,
+				480DB404233DC64A0015D756 /* StadionCompassWatch Extension */,
 				489B74571FE99BBE0020B4CB /* Products */,
 				48500A04222F0BA5007E1AAF /* Frameworks */,
 			);
@@ -118,6 +239,8 @@
 			children = (
 				489B74561FE99BBE0020B4CB /* StadionCompass.app */,
 				48FD299F2027857800724D0C /* plist2csv */,
+				480DB3F4233DC6470015D756 /* StadionCompassWatch.app */,
+				480DB400233DC64A0015D756 /* StadionCompassWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +255,7 @@
 				48500A01222F05BD007E1AAF /* StadiumData.xcdatamodeld */,
 				48500A2A22342CA2007E1AAF /* CloudKitHelper.swift */,
 				481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */,
+				480DB41C233E2D1A0015D756 /* SessionHandler.swift */,
 				48500A282233030A007E1AAF /* CoreDataHelper.swift */,
 				484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */,
 				489B745B1FE99BBE0020B4CB /* ViewController.swift */,
@@ -160,6 +284,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		480DB3F3233DC6470015D756 /* StadionCompassWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 480DB418233DC64B0015D756 /* Build configuration list for PBXNativeTarget "StadionCompassWatch" */;
+			buildPhases = (
+				480DB3F2233DC6470015D756 /* Resources */,
+				480DB417233DC64B0015D756 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				480DB403233DC64A0015D756 /* PBXTargetDependency */,
+			);
+			name = StadionCompassWatch;
+			productName = StadionCompassWatch;
+			productReference = 480DB3F4233DC6470015D756 /* StadionCompassWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		480DB3FF233DC64A0015D756 /* StadionCompassWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 480DB414233DC64B0015D756 /* Build configuration list for PBXNativeTarget "StadionCompassWatch Extension" */;
+			buildPhases = (
+				480DB3FC233DC64A0015D756 /* Sources */,
+				480DB3FD233DC64A0015D756 /* Frameworks */,
+				480DB3FE233DC64A0015D756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StadionCompassWatch Extension";
+			productName = "StadionCompassWatch Extension";
+			productReference = 480DB400233DC64A0015D756 /* StadionCompassWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		489B74551FE99BBE0020B4CB /* StadionCompass */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 489B74681FE99BBE0020B4CB /* Build configuration list for PBXNativeTarget "StadionCompass" */;
@@ -168,10 +326,12 @@
 				489B74521FE99BBE0020B4CB /* Sources */,
 				489B74531FE99BBE0020B4CB /* Frameworks */,
 				489B74541FE99BBE0020B4CB /* Resources */,
+				480DB41B233DC64B0015D756 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				480DB412233DC64B0015D756 /* PBXTargetDependency */,
 			);
 			name = StadionCompass;
 			productName = StadionCompass;
@@ -201,10 +361,18 @@
 		489B744E1FE99BBE0020B4CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0940;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Holger Krupp";
 				TargetAttributes = {
+					480DB3F3233DC6470015D756 = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+					};
+					480DB3FF233DC64A0015D756 = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+					};
 					489B74551FE99BBE0020B4CB = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1030;
@@ -242,11 +410,31 @@
 			targets = (
 				489B74551FE99BBE0020B4CB /* StadionCompass */,
 				48FD299E2027857800724D0C /* plist2csv */,
+				480DB3F3233DC6470015D756 /* StadionCompassWatch */,
+				480DB3FF233DC64A0015D756 /* StadionCompassWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		480DB3F2233DC6470015D756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480DB3FA233DC64A0015D756 /* Assets.xcassets in Resources */,
+				480DB3F8233DC6470015D756 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480DB3FE233DC64A0015D756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480DB40E233DC64B0015D756 /* Assets.xcassets in Resources */,
+				480DB420233E318E0015D756 /* StadionData.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		489B74541FE99BBE0020B4CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,7 +445,7 @@
 				4859595520153B67003FC320 /* Main.storyboard in Resources */,
 				48FAAB5E2011365F006C8D61 /* distanceTexts.plist in Resources */,
 				4859594120153756003FC320 /* Localizable.strings in Resources */,
-				489B746E1FE99E510020B4CB /* StadionData.plist in Resources */,
+				480DB424233E34240015D756 /* StadionData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +469,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		480DB3FC233DC64A0015D756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480DB423233E335E0015D756 /* cmykUIColor.swift in Sources */,
+				480DB421233E32170015D756 /* Stadium.swift in Sources */,
+				480DB437233F13020015D756 /* StadionRowController.swift in Sources */,
+				480DB40A233DC64A0015D756 /* NotificationController.swift in Sources */,
+				480DB40C233DC64A0015D756 /* ComplicationController.swift in Sources */,
+				480DB432233F0BD90015D756 /* StadionSelecterInerfaceController.swift in Sources */,
+				480DB422233E32E60015D756 /* supportfunctions.swift in Sources */,
+				480DB408233DC64A0015D756 /* ExtensionDelegate.swift in Sources */,
+				480DB406233DC64A0015D756 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		489B74521FE99BBE0020B4CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,6 +496,7 @@
 				489B74721FE9A7650020B4CB /* Stadium.swift in Sources */,
 				481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */,
 				48500A292233030A007E1AAF /* CoreDataHelper.swift in Sources */,
+				480DB41D233E2D1A0015D756 /* SessionHandler.swift in Sources */,
 				484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */,
 				48500A2B22342CA2007E1AAF /* CloudKitHelper.swift in Sources */,
 				48FD29A72027870900724D0C /* supportfunctions.swift in Sources */,
@@ -308,7 +513,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		480DB403233DC64A0015D756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 480DB3FF233DC64A0015D756 /* StadionCompassWatch Extension */;
+			targetProxy = 480DB402233DC64A0015D756 /* PBXContainerItemProxy */;
+		};
+		480DB412233DC64B0015D756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 480DB3F3233DC6470015D756 /* StadionCompassWatch */;
+			targetProxy = 480DB411233DC64B0015D756 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		480DB3F6233DC6470015D756 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				480DB3F7233DC6470015D756 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		4859594320153756003FC320 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,6 +587,96 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		480DB415233DC64B0015D756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 703;
+				DEVELOPMENT_TEAM = 46D3VYP253;
+				INFOPLIST_FILE = "StadionCompassWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		480DB416233DC64B0015D756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 703;
+				DEVELOPMENT_TEAM = 46D3VYP253;
+				INFOPLIST_FILE = "StadionCompassWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		480DB419233DC64B0015D756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 703;
+				DEVELOPMENT_TEAM = 46D3VYP253;
+				IBSC_MODULE = StadionCompassWatch_Extension;
+				INFOPLIST_FILE = StadionCompassWatch/Info.plist;
+				MARKETING_VERSION = 1.1920.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		480DB41A233DC64B0015D756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 703;
+				DEVELOPMENT_TEAM = 46D3VYP253;
+				IBSC_MODULE = StadionCompassWatch_Extension;
+				INFOPLIST_FILE = StadionCompassWatch/Info.plist;
+				MARKETING_VERSION = 1.1920.1;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
 		489B74661FE99BBE0020B4CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -481,9 +797,14 @@
 				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StadionCompass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -498,9 +819,14 @@
 				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StadionCompass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -514,6 +840,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
+				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -527,6 +854,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46D3VYP253;
+				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -537,6 +865,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		480DB414233DC64B0015D756 /* Build configuration list for PBXNativeTarget "StadionCompassWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480DB415233DC64B0015D756 /* Debug */,
+				480DB416233DC64B0015D756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		480DB418233DC64B0015D756 /* Build configuration list for PBXNativeTarget "StadionCompassWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480DB419233DC64B0015D756 /* Debug */,
+				480DB41A233DC64B0015D756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		489B74511FE99BBE0020B4CB /* Build configuration list for PBXProject "StadionCompass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

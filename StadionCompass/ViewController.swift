@@ -10,6 +10,8 @@ import UIKit
 import CoreLocation
 import UserNotifications
 import MapKit
+import GoogleMobileAds
+
 
 class ViewController: UIViewController {
     
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
         goToSettings()
     }
     
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     
     var stadion : Stadium?
     let locationManager = CLLocationManager.init()
@@ -40,6 +44,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        validateReceipt()
         self.navigationController?.isNavigationBarHidden = true
         allowLocation.isHidden = true
         var stadionID = ""
@@ -89,12 +94,28 @@ class ViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: animated);
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         self.navigationController?.navigationBar.isHidden = true
+        if !proPurchased(){
+            loadBanner()
+        }else{
+            bannerView.removeFromSuperview()
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         updateLocation()
+        
     }
     
+    
+    func loadBanner(){
+        let GoogleAdUnitIDBanner = "ca-app-pub-5806009591474824/6172112796"
+
+        bannerView.adUnitID = GoogleAdUnitIDBanner
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
+    }
 
     func updateLocation(){
         degreesLabel.text = "checking location"
@@ -204,6 +225,9 @@ class ViewController: UIViewController {
             correction = -90.0
         case .unknown:
             //default
+            break
+        @unknown default:
+            //
             break
         }
         
@@ -424,14 +448,6 @@ extension ViewController: CLLocationManagerDelegate{
 
 
 
-extension FloatingPoint {
-    var degreesToRadians: Self { return self * .pi / 180 }
-    var radiansToDegrees: Self { return self * 180 / .pi }
+extension ViewController: GADBannerViewDelegate{
+    
 }
-extension Double {
-    func format(f: String) -> String {
-        return String(format: "%\(f)f", self)
-    }
-}
-
-

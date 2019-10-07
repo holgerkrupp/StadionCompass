@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14868" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14643"/>
+    </dependencies>
+    <scenes>
+        <!--compass-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="compass" fullBounds="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="StadionCompassWatch" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="2aW-3k-gdJ">
+                            <connections>
+                                <action selector="NameButtonPressed" destination="AgC-eL-Hgc" id="pll-24-foz"/>
+                            </connections>
+                        </button>
+                        <spriteKitScene width="80" height="80" alignment="center" verticalAlignment="center" id="1JY-V0-fvX"/>
+                        <label width="1" alignment="left" verticalAlignment="bottom" text="Distance" textAlignment="center" id="jY8-SN-97X"/>
+                    </items>
+                    <connections>
+                        <outlet property="NameButton" destination="2aW-3k-gdJ" id="rNA-qF-yVb"/>
+                        <outlet property="arrowSKimage" destination="1JY-V0-fvX" id="oVq-Ef-d9i"/>
+                        <outlet property="distanceTextLabel" destination="jY8-SN-97X" id="nVx-xQ-zBO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="22" y="13"/>
+        </scene>
+        <!--table-->
+        <scene sceneID="RtY-vJ-hBN">
+            <objects>
+                <controller identifier="table" id="dm0-SF-CaM" customClass="StadionSelecterInerfaceController" customModule="StadionCompassWatch_Extension">
+                    <items>
+                        <table alignment="center" verticalAlignment="center" id="0m5-KB-ZeZ">
+                            <items>
+                                <tableRow identifier="StadionRow" id="NWs-Nb-2r0" customClass="StadionRowController" customModule="StadionCompassWatch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="a4x-cH-EeI">
+                                        <items>
+                                            <label width="1" alignment="left" text="Team" textAlignment="center" id="SqP-zW-VMX"/>
+                                            <label width="1" alignment="center" verticalAlignment="bottom" text="Stadion" textAlignment="center" id="Qeb-b5-Tcg">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="StadionLabel" destination="Qeb-b5-Tcg" id="aJJ-xi-Z91"/>
+                                        <outlet property="TeamLabel" destination="SqP-zW-VMX" id="D70-RZ-uCV"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="StadionList" destination="0m5-KB-ZeZ" id="Iry-bg-eY9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="391" y="13"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="71" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="StadionCompassWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="StadionCompassWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>

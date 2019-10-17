@@ -1,3 +1,5 @@
+# Remove external Frameworks from language detection.
+# In this project these frameworks contain objective-C, but the rest of the app is swift.
 GoogleAppMeasurement.framework/* linguist-vendored
 GoogleMobileAds.framework/* linguist-vendored
 GoogleUtilities.framework/* linguist-vendored

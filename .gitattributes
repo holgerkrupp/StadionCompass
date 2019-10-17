@@ -1,0 +1,4 @@
+GoogleAppMeasurement.framework/* linguist-vendored
+GoogleMobileAds.framework/* linguist-vendored
+GoogleUtilities.framework/* linguist-vendored
+nanopb.framework/* linguist-vendored

@@ -72,7 +72,6 @@
 		489B74711FE9A7650020B4CB /* Stadium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stadium.swift; sourceTree = "<group>"; };
 		48FD299F2027857800724D0C /* plist2csv */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = plist2csv; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FD29A12027857800724D0C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		48FD29A82027883600724D0C /* StadionData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StadionData.plist; sourceTree = "<group>"; };
 		48FD29A92028EBEB00724D0C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48FD29AA2028EBEB00724D0C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/distanceTexts.plist; sourceTree = "<group>"; };
 		48FD29AB2028EBEB00724D0C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -171,7 +170,6 @@
 		48FD29A02027857800724D0C /* plist2csv */ = {
 			isa = PBXGroup;
 			children = (
-				48FD29A82027883600724D0C /* StadionData.plist */,
 				48FD29A12027857800724D0C /* main.swift */,
 			);
 			path = plist2csv;

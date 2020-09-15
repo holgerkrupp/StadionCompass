@@ -183,7 +183,7 @@ class Stadium: NSObject {
             //significant location change:
         
             locationManager.delegate = self
-        locationManager.startMonitoringSignificantLocationChanges()
+      //  locationManager.startMonitoringSignificantLocationChanges()
         
         
         
@@ -266,7 +266,7 @@ class Stadium: NSObject {
 extension Stadium: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
         
-        
+        /*
         
         let lastLocation = locations.last!
         
@@ -294,6 +294,6 @@ extension Stadium: CLLocationManagerDelegate{
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: nil)
         center().add(request, withCompletionHandler: nil)
         
-        
+        */
     }
 }

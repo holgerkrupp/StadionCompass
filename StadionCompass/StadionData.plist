@@ -4,6 +4,46 @@
 <dict>
 	<key>1|🇩🇪 Bundesliga</key>
 	<dict>
+		<key>VFB Stuttgart</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#f22b1a</string>
+			<key>textColor</key>
+			<string>#FFFFFF</string>
+			<key>arrowColor</key>
+			<string>#FFFFFF</string>
+			<key>name</key>
+			<string>Mercedes-Benz Arena</string>
+			<key>city</key>
+			<string>Stuttgart</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>48.7922577</real>
+				<key>lon</key>
+				<real>9.232079999</real>
+			</dict>
+		</dict>
+		<key>Arminia Bielefeld</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>textColor</key>
+			<string>#004e95</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>SchücoArena</string>
+			<key>city</key>
+			<string>Bielefeld</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>52.031389</real>
+				<key>lon</key>
+				<real>8.516944000000001</real>
+			</dict>
+		</dict>
 		<key>1. FC Köln</key>
 		<dict>
 			<key>backgroundColor</key>
@@ -42,26 +82,6 @@
 				<real>52.457222</real>
 				<key>lon</key>
 				<real>13.568056</real>
-			</dict>
-		</dict>
-		<key>SC Paderborn 07</key>
-		<dict>
-			<key>backgroundColor</key>
-			<string>#2A64A0</string>
-			<key>textColor</key>
-			<string>#FFFFFF</string>
-			<key>arrowColor</key>
-			<string>#000000</string>
-			<key>name</key>
-			<string>Benteler-Arena</string>
-			<key>city</key>
-			<string>Paderborn</string>
-			<key>location</key>
-			<dict>
-				<key>lat</key>
-				<real>51.731389</real>
-				<key>lon</key>
-				<real>8.710832999999999</real>
 			</dict>
 		</dict>
 		<key>1. FSV Mainz 05</key>
@@ -350,6 +370,29 @@
 				<real>10.80385039</real>
 			</dict>
 		</dict>
+	</dict>
+	<key>2|🇩🇪 2. Bundesliga</key>
+	<dict>
+		<key>Eintracht Braunschweig</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#fbbd0e</string>
+			<key>textColor</key>
+			<string>#145ca2</string>
+			<key>arrowColor</key>
+			<string>#145ca2</string>
+			<key>name</key>
+			<string>Eintracht-Stadion</string>
+			<key>city</key>
+			<string>Braunschweig</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>52.290144</real>
+				<key>lon</key>
+				<real>10.521562</real>
+			</dict>
+		</dict>
 		<key>Fortuna Düsseldorf</key>
 		<dict>
 			<key>backgroundColor</key>
@@ -370,29 +413,24 @@
 				<real>6.733083</real>
 			</dict>
 		</dict>
-	</dict>
-	<key>2|🇩🇪 2. Bundesliga</key>
-	<dict>
-		<key>SV Wehen Wiesbaden</key>
+		<key>SC Paderborn 07</key>
 		<dict>
-			<key>homeslogan</key>
-			<string></string>
 			<key>backgroundColor</key>
-			<string>#FD1320</string>
+			<string>#2A64A0</string>
 			<key>textColor</key>
-			<string>#000000</string>
+			<string>#FFFFFF</string>
 			<key>arrowColor</key>
 			<string>#000000</string>
 			<key>name</key>
-			<string>Brita-Arena</string>
+			<string>Benteler-Arena</string>
 			<key>city</key>
-			<string>Wiesbaden</string>
+			<string>Paderborn</string>
 			<key>location</key>
 			<dict>
 				<key>lat</key>
-				<real>50.071244</real>
+				<real>51.731389</real>
 				<key>lon</key>
-				<real>8.256644</real>
+				<real>8.710832999999999</real>
 			</dict>
 		</dict>
 		<key>VfL Osnabrück</key>
@@ -621,46 +659,6 @@
 				<real>12.107238</real>
 			</dict>
 		</dict>
-		<key>Arminia Bielefeld</key>
-		<dict>
-			<key>backgroundColor</key>
-			<string>#FFFFFF</string>
-			<key>textColor</key>
-			<string>#004e95</string>
-			<key>arrowColor</key>
-			<string>#000000</string>
-			<key>name</key>
-			<string>SchücoArena</string>
-			<key>city</key>
-			<string>Bielefeld</string>
-			<key>location</key>
-			<dict>
-				<key>lat</key>
-				<real>52.031389</real>
-				<key>lon</key>
-				<real>8.516944000000001</real>
-			</dict>
-		</dict>
-		<key>Dynamo Dresden</key>
-		<dict>
-			<key>backgroundColor</key>
-			<string>#060604</string>
-			<key>textColor</key>
-			<string>#f3ac26</string>
-			<key>arrowColor</key>
-			<string>#93000e</string>
-			<key>name</key>
-			<string>DDV-Stadion</string>
-			<key>city</key>
-			<string>Dresden</string>
-			<key>location</key>
-			<dict>
-				<key>lat</key>
-				<real>51.041111</real>
-				<key>lon</key>
-				<real>13.748333</real>
-			</dict>
-		</dict>
 		<key>VfL Bochum</key>
 		<dict>
 			<key>backgroundColor</key>
@@ -759,6 +757,26 @@
 				<real>49.486944</real>
 				<key>lon</key>
 				<real>10.999167</real>
+			</dict>
+		</dict>
+		<key>Würzburger Kickers</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#D80101</string>
+			<key>textColor</key>
+			<string>#ffffff</string>
+			<key>arrowColor</key>
+			<string>#ffffff</string>
+			<key>name</key>
+			<string>Flyeralarm Arena</string>
+			<key>city</key>
+			<string>Fürth</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>49.767194</real>
+				<key>lon</key>
+				<real>9.932944000000001</real>
 			</dict>
 		</dict>
 	</dict>
@@ -1650,6 +1668,48 @@
 	</dict>
 	<key>5|Other</key>
 	<dict>
+		<key>Dynamo Dresden</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#060604</string>
+			<key>textColor</key>
+			<string>#f3ac26</string>
+			<key>arrowColor</key>
+			<string>#93000e</string>
+			<key>name</key>
+			<string>DDV-Stadion</string>
+			<key>city</key>
+			<string>Dresden</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>51.041111</real>
+				<key>lon</key>
+				<real>13.748333</real>
+			</dict>
+		</dict>
+		<key>SV Wehen Wiesbaden</key>
+		<dict>
+			<key>homeslogan</key>
+			<string></string>
+			<key>backgroundColor</key>
+			<string>#FD1320</string>
+			<key>textColor</key>
+			<string>#000000</string>
+			<key>arrowColor</key>
+			<string>#000000</string>
+			<key>name</key>
+			<string>Brita-Arena</string>
+			<key>city</key>
+			<string>Wiesbaden</string>
+			<key>location</key>
+			<dict>
+				<key>lat</key>
+				<real>50.071244</real>
+				<key>lon</key>
+				<real>8.256644</real>
+			</dict>
+		</dict>
 		<key>Girona FC</key>
 		<dict>
 			<key>homeslogan</key>
@@ -1952,26 +2012,6 @@
 				<real>52.988105</real>
 				<key>lon</key>
 				<real>-2.17643</real>
-			</dict>
-		</dict>
-		<key>Eintracht Braunschweig</key>
-		<dict>
-			<key>backgroundColor</key>
-			<string>#fbbd0e</string>
-			<key>textColor</key>
-			<string>#145ca2</string>
-			<key>arrowColor</key>
-			<string>#145ca2</string>
-			<key>name</key>
-			<string>Eintracht-Stadion</string>
-			<key>city</key>
-			<string>Braunschweig</string>
-			<key>location</key>
-			<dict>
-				<key>lat</key>
-				<real>52.290144</real>
-				<key>lon</key>
-				<real>10.521562</real>
 			</dict>
 		</dict>
 		<key>1. FC Kaiserslautern</key>

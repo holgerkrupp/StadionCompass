@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1920.1</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>703</string>
+	<string>710</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5806009591474824~2758932653</string>
 	<key>ITSAppUsesNonExemptEncryption</key>

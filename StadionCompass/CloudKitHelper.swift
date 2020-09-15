@@ -17,7 +17,7 @@ class CloudKitHelper: NSObject {
     func setObservers(){
         NotificationCenter.default.addObserver(self, selector: #selector(persistentStoragedidchange), name: NSNotification.Name.NSPersistentStoreCoordinatorStoresDidChange, object: nil)
         
-  NotificationCenter.default.addObserver(self, selector: #selector(persistentStoragewillchange), name: NSNotification.Name.NSPersistentStoreCoordinatorStoresWillChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(persistentStoragewillchange), name: NSNotification.Name.NSPersistentStoreCoordinatorStoresWillChange, object: nil)
         
     }
     

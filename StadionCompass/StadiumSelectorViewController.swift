@@ -28,14 +28,7 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     override func viewDidLoad() {
         super.viewDidLoad()
         startSession()
-      // let CDHelper = CoreDataHelper()
-      //  CDHelper.deleteDatabase()
-        let CDHelper = CoreDataHelper()
-        CDHelper.readCompetitions()
-        
-        let CLHelper = CloudKitHelper()
-    //    CLHelper.subscribeChanges()
-        CLHelper.setObservers()
+ 
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
        allTeams = loadTeams()
@@ -231,8 +224,7 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
             for competition in allcompetitions{
                 NSLog("Competition found locally: \(competition.key)")
                 
-                    let CDHelper = CoreDataHelper()
-                    CDHelper.saveCompetition(competition: competition.key)
+                  
                     
                 
 

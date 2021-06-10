@@ -9,7 +9,6 @@
 import UIKit
 import UserNotifications
 import CoreData
-import WatchConnectivity
 import GoogleMobileAds
 
 
@@ -23,9 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UNUserNotificationCenter.current().delegate = self
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        if !SessionHandler.shared.isSuported() {
-            print("WCSession not supported (f.e. on iPad).")
-        }
+
         // Override point for customization after application launch.
         return true
     }

@@ -11,6 +11,7 @@ import AppTrackingTransparency
 import GoogleMobileAds
 
 class bannerView: UIViewController{
+    
     @IBOutlet weak var banenrView: GADBannerView!
     
     
@@ -20,7 +21,6 @@ class bannerView: UIViewController{
             if (getObjectForKeyFromPersistentStorrage("Tracking") == nil){
                 if #available(iOS 14, *) {
                     ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                        
                         self.loadBanner()
                         setObjectForKeyToPersistentStorrage("Tracking", object: true)
                     })

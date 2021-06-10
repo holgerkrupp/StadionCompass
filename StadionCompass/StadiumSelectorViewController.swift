@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WatchConnectivity
 import GoogleMobileAds
 
 class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerDelegate {
@@ -22,18 +21,15 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    var session: WCSession?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startSession()
  
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
        allTeams = loadTeams()
         if let homeStadium = getObjectForKeyFromPersistentStorrage("homestadium") as? String{
             UIView.setAnimationsEnabled(false)
-            saveToWatch(homestadium: homeStadium)
             performSegue(withIdentifier: "showNavigator", sender: self)
             
         }else{
@@ -187,7 +183,6 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
 
         if let hometeam = Stadion.hometeam{
             UIView.setAnimationsEnabled(true)
-            saveToWatch(homestadium: hometeam)
             setObjectForKeyToPersistentStorrage("homestadium", object: hometeam)
         }
        
@@ -259,52 +254,3 @@ extension StadiumSelectorViewController: UISearchResultsUpdating {
 }
 
 
-extension StadiumSelectorViewController: WCSessionDelegate{
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { }
-    func sessionDidBecomeInactive(_ session: WCSession) { }
-    func sessionDidDeactivate(_ session: WCSession) { }
-    
-    func startSession(){
-        if WCSession.isSupported() {
-            session = WCSession.default
-            session?.delegate = self
-            session?.activate()
-        }
-    }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        
-        if let message = message as? [String : String] {
-            
-            if let homestadium = message["homestadium"]{
-               setObjectForKeyToPersistentStorrage("homestadium", object: homestadium)
-                // WKInterfaceDevice.current().play(.notification)
-            }else{
-                NSLog("homestadium not set")
-                dump(message)
-            }
-        }
-    }
-    
-    
-    func saveToWatch(homestadium : String){
-         if let validSession = session {
-               let iPhoneAppContext = ["homestadium": homestadium]
-        
-               do {
-                   try validSession.updateApplicationContext(iPhoneAppContext)
-                    NSLog("Saved To watch:")
-                dump(iPhoneAppContext)
-               } catch {
-                   print("Something went wrong")
-               }
-           }
-        
-        session?.sendMessage(["homestadium" : homestadium], replyHandler: nil, errorHandler: { (error) in
-                              print("Error sending message: \(error)")
-
-        })
-        
- 
-    }
-}

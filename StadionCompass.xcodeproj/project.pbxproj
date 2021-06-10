@@ -44,7 +44,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		480DB3F4233DC6470015D756 /* StadionCompassWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = StadionCompassWatch.app; path = "/Users/holgerkrupp/Library/Mobile Documents/com~apple~CloudDocs/Cocoa/iOS/StadionCompass/build/Debug-watchos/StadionCompassWatch.app"; sourceTree = "<absolute>"; };
 		480DB41C233E2D1A0015D756 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		480DB429233EFFB90015D756 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		480DB42B233EFFC60015D756 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
@@ -165,7 +164,6 @@
 		48A79A3E24C0BD47009158C6 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				480DB3F4233DC6470015D756 /* StadionCompassWatch.app */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";

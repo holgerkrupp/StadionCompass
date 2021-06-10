@@ -24,7 +24,6 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     
     var session: WCSession?
     
-    @IBOutlet weak var bannerView: GADBannerView!
     override func viewDidLoad() {
         super.viewDidLoad()
         startSession()
@@ -75,11 +74,7 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
     override func viewWillAppear(_ animated: Bool) {
         reloadheaders()
         self.tableView.reloadData()
-        if !proPurchased(){
-            loadBanner()
-        }else{
-            bannerView.removeFromSuperview()
-        }
+
 
         
     }
@@ -90,13 +85,7 @@ class StadiumSelectorViewController: UITableViewController, UIGestureRecognizerD
 
     }
     
-    func loadBanner(){
-        let GoogleAdUnitIDBanner = "ca-app-pub-5806009591474824/6172112796"
 
-        bannerView.adUnitID = GoogleAdUnitIDBanner
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

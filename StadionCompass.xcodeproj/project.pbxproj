@@ -20,6 +20,7 @@
 		4859594120153756003FC320 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859594320153756003FC320 /* Localizable.strings */; };
 		4859595520153B67003FC320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4859595320153B67003FC320 /* Main.storyboard */; };
 		4859595820153BDE003FC320 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859595A20153BDE003FC320 /* InfoPlist.strings */; };
+		48609E9F2671F80B00ED65B2 /* bannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48609E9E2671F80B00ED65B2 /* bannerView.swift */; };
 		489B745A1FE99BBE0020B4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B74591FE99BBE0020B4CB /* AppDelegate.swift */; };
 		489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B745B1FE99BBE0020B4CB /* ViewController.swift */; };
 		489B74611FE99BBE0020B4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489B74601FE99BBE0020B4CB /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		4859596020153D80003FC320 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4859596120153D80003FC320 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/distanceTexts.plist; sourceTree = "<group>"; };
 		4859596220153D81003FC320 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		48609E9E2671F80B00ED65B2 /* bannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bannerView.swift; sourceTree = "<group>"; };
 		489B74561FE99BBE0020B4CB /* StadionCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StadionCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489B74591FE99BBE0020B4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489B745B1FE99BBE0020B4CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				489B745B1FE99BBE0020B4CB /* ViewController.swift */,
 				481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */,
 				4859595320153B67003FC320 /* Main.storyboard */,
+				48609E9E2671F80B00ED65B2 /* bannerView.swift */,
 				489B74601FE99BBE0020B4CB /* Assets.xcassets */,
 				489B74621FE99BBE0020B4CB /* LaunchScreen.storyboard */,
 				4859595620153B9B003FC320 /* Info.plist */,
@@ -219,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Holger Krupp";
 				TargetAttributes = {
 					489B74551FE99BBE0020B4CB = {
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48609E9F2671F80B00ED65B2 /* bannerView.swift in Sources */,
 				481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */,
 				489B745C1FE99BBE0020B4CB /* ViewController.swift in Sources */,
 				489B745A1FE99BBE0020B4CB /* AppDelegate.swift in Sources */,
@@ -385,6 +389,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -410,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -445,6 +450,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -464,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -478,15 +484,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 712;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = StadionCompass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2021;
+				MARKETING_VERSION = 1.2122.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,15 +508,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 712;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = StadionCompass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2021;
+				MARKETING_VERSION = 1.2122.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";

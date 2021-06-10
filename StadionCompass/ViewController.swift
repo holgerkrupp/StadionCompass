@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         goToSettings()
     }
     
-    @IBOutlet weak var bannerView: GADBannerView!
     
     
     var stadion : Stadium?
@@ -43,6 +42,7 @@ class ViewController: UIViewController {
     //let motionManager = CMDeviceMotion.init()
     
     override func viewDidLoad() {
+        locationManager.delegate = self
         super.viewDidLoad()
         validateReceipt()
         self.navigationController?.isNavigationBarHidden = true
@@ -94,11 +94,7 @@ class ViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: animated);
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         self.navigationController?.navigationBar.isHidden = true
-        if !proPurchased(){
-            loadBanner()
-        }else{
-            bannerView.removeFromSuperview()
-        }
+
         
     }
     
@@ -108,14 +104,7 @@ class ViewController: UIViewController {
     }
     
     
-    func loadBanner(){
-        let GoogleAdUnitIDBanner = "ca-app-pub-5806009591474824/6172112796"
 
-        bannerView.adUnitID = GoogleAdUnitIDBanner
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        
-    }
 
     func updateLocation(){
         degreesLabel.text = "checking location"
@@ -393,6 +382,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: CLLocationManagerDelegate{
+    
+    
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         updateLocation()
     }
@@ -447,7 +439,3 @@ extension ViewController: CLLocationManagerDelegate{
 }
 
 
-
-extension ViewController: GADBannerViewDelegate{
-    
-}

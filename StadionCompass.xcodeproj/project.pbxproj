@@ -9,14 +9,9 @@
 /* Begin PBXBuildFile section */
 		480DB41D233E2D1A0015D756 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DB41C233E2D1A0015D756 /* SessionHandler.swift */; };
 		480DB424233E34240015D756 /* StadionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 489B746D1FE99E510020B4CB /* StadionData.plist */; };
-		480DB42A233EFFB90015D756 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB429233EFFB90015D756 /* GoogleAppMeasurement.framework */; };
-		480DB42C233EFFC60015D756 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB42B233EFFC60015D756 /* nanopb.framework */; };
-		480DB42E233EFFD20015D756 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB42D233EFFD20015D756 /* GoogleMobileAds.framework */; };
-		480DB430233EFFDC0015D756 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480DB42F233EFFDC0015D756 /* GoogleUtilities.framework */; };
 		481571B41FEBF1F0009A5A28 /* cmykUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */; };
 		481571C21FF17070009A5A28 /* StadiumSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */; };
 		484B0C912014B97100D9BADE /* StadiumSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */; };
-		48500A06222F0BA5007E1AAF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48500A05222F0BA5007E1AAF /* CloudKit.framework */; };
 		4859594120153756003FC320 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859594320153756003FC320 /* Localizable.strings */; };
 		4859595520153B67003FC320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4859595320153B67003FC320 /* Main.storyboard */; };
 		4859595820153BDE003FC320 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4859595A20153BDE003FC320 /* InfoPlist.strings */; };
@@ -29,6 +24,7 @@
 		48FAAB5E2011365F006C8D61 /* distanceTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48FAAB602011365F006C8D61 /* distanceTexts.plist */; };
 		48FD29A22027857800724D0C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FD29A12027857800724D0C /* main.swift */; };
 		48FD29A72027870900724D0C /* supportfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B746F1FE99FF70020B4CB /* supportfunctions.swift */; };
+		DFCE1C83FF7952F43DB0B77F /* libPods-StadionCompass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF00E3892D6BBAB119958155 /* libPods-StadionCompass.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,16 +40,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		44B72A69F866E1AA3327A5AF /* Pods-StadionCompass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StadionCompass.debug.xcconfig"; path = "Target Support Files/Pods-StadionCompass/Pods-StadionCompass.debug.xcconfig"; sourceTree = "<group>"; };
 		480DB41C233E2D1A0015D756 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
-		480DB429233EFFB90015D756 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
-		480DB42B233EFFC60015D756 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
-		480DB42D233EFFD20015D756 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		480DB42F233EFFDC0015D756 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
 		481571B31FEBF1F0009A5A28 /* cmykUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmykUIColor.swift; sourceTree = "<group>"; };
 		481571C11FF17070009A5A28 /* StadiumSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorViewController.swift; sourceTree = "<group>"; };
 		482CB94C219A211F0056FF73 /* StadionCompass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StadionCompass.entitlements; sourceTree = "<group>"; };
 		484B0C902014B97100D9BADE /* StadiumSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumSelectorCell.swift; sourceTree = "<group>"; };
-		48500A05222F0BA5007E1AAF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		4859595620153B9B003FC320 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4859595B20153D00003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4859595C20153D00003FC320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +71,8 @@
 		48FD29AC2028EBFA00724D0C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48FD29AD2028EBFA00724D0C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = es; path = es.lproj/distanceTexts.plist; sourceTree = "<group>"; };
 		48FD29AE2028EBFA00724D0C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7FF93E15F61C7235BE56C093 /* Pods-StadionCompass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StadionCompass.release.xcconfig"; path = "Target Support Files/Pods-StadionCompass/Pods-StadionCompass.release.xcconfig"; sourceTree = "<group>"; };
+		AF00E3892D6BBAB119958155 /* libPods-StadionCompass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StadionCompass.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				480DB42A233EFFB90015D756 /* GoogleAppMeasurement.framework in Frameworks */,
-				480DB42C233EFFC60015D756 /* nanopb.framework in Frameworks */,
-				480DB42E233EFFD20015D756 /* GoogleMobileAds.framework in Frameworks */,
-				480DB430233EFFDC0015D756 /* GoogleUtilities.framework in Frameworks */,
-				48500A06222F0BA5007E1AAF /* CloudKit.framework in Frameworks */,
+				DFCE1C83FF7952F43DB0B77F /* libPods-StadionCompass.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,11 +97,7 @@
 		48500A04222F0BA5007E1AAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				480DB42F233EFFDC0015D756 /* GoogleUtilities.framework */,
-				480DB42D233EFFD20015D756 /* GoogleMobileAds.framework */,
-				480DB42B233EFFC60015D756 /* nanopb.framework */,
-				480DB429233EFFB90015D756 /* GoogleAppMeasurement.framework */,
-				48500A05222F0BA5007E1AAF /* CloudKit.framework */,
+				AF00E3892D6BBAB119958155 /* libPods-StadionCompass.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +110,7 @@
 				489B74571FE99BBE0020B4CB /* Products */,
 				48500A04222F0BA5007E1AAF /* Frameworks */,
 				48A79A3E24C0BD47009158C6 /* Recovered References */,
+				E70784ECBC1D02D1C50F6A74 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +163,15 @@
 			path = plist2csv;
 			sourceTree = "<group>";
 		};
+		E70784ECBC1D02D1C50F6A74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44B72A69F866E1AA3327A5AF /* Pods-StadionCompass.debug.xcconfig */,
+				7FF93E15F61C7235BE56C093 /* Pods-StadionCompass.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 489B74681FE99BBE0020B4CB /* Build configuration list for PBXNativeTarget "StadionCompass" */;
 			buildPhases = (
+				72D8B75E4BA704E26CEEDC9E /* [CP] Check Pods Manifest.lock */,
 				489B74521FE99BBE0020B4CB /* Sources */,
 				489B74531FE99BBE0020B4CB /* Frameworks */,
 				489B74541FE99BBE0020B4CB /* Resources */,
@@ -280,6 +277,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72D8B75E4BA704E26CEEDC9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StadionCompass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		489B74521FE99BBE0020B4CB /* Sources */ = {
@@ -478,11 +500,12 @@
 		};
 		489B74691FE99BBE0020B4CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44B72A69F866E1AA3327A5AF /* Pods-StadionCompass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 712;
+				CURRENT_PROJECT_VERSION = 715;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,8 +514,7 @@
 				INFOPLIST_FILE = StadionCompass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2122.1;
-				OTHER_LDFLAGS = "-ObjC";
+				MARKETING_VERSION = 1.2223.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -502,11 +524,12 @@
 		};
 		489B746A1FE99BBE0020B4CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF93E15F61C7235BE56C093 /* Pods-StadionCompass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StadionCompass/StadionCompass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 712;
+				CURRENT_PROJECT_VERSION = 715;
 				DEVELOPMENT_TEAM = 46D3VYP253;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,8 +538,7 @@
 				INFOPLIST_FILE = StadionCompass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2122.1;
-				OTHER_LDFLAGS = "-ObjC";
+				MARKETING_VERSION = 1.2223.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.holgerkrupp.StadiumCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
